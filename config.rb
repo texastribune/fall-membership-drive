@@ -47,10 +47,13 @@ activate :livereload
 #   end
 # end
 
+# Sets CSS directory name
 set :css_dir, 'css'
 
+# Sets JS directory name
 set :js_dir, 'js'
 
+# Sets images directory name
 set :images_dir, 'img'
 
 # Build-specific configuration
