@@ -7,6 +7,7 @@
   height: 50px
   position: fixed
   width: 100%
+  z-index: 5 //to be sure it is seen over the flowing circular images
   .wrapper
     padding: 0.5em
   .social-link
@@ -15,45 +16,45 @@
     font-size: 2em
     padding: 0 0.5em
   h1
-    display: inline-block
-    margin: 0
-    font-weight: 500
-    text-transform: uppercase
-    font-size: 0.8em
-    letter-spacing: 0.2em
     color: $trib-yellow
-    vertical-align: middle
+    display: inline-block
+    font-size: 0.8em
+    font-weight: 500
+    letter-spacing: 0.2em
+    margin: 0
     padding: 0.8em
+    text-transform: uppercase
+    vertical-align: middle
     span
       color: $trib-yellow
       font-weight: normal
 
 footer
   background-color: $head-foot-bg
-  height: 50px
   color: white
-  text-align: center
+  height: 50px
   padding-top: 0.2em
+  text-align: center
+
 
 // Styles for content types used in themed sections
 
 // Content flowing between sections
 .flow
-  z-index: 2
   border-radius: 200px
-  position: relative
   margin-bottom: -80px
+  padding: 2em
+  position: relative
+  z-index: 2
 
-.right
-  float: right
+.image-wrapper
+  width: 50%
 
-.left
-  float: left
-
-// Images
 .image
   padding: 0.5em
 
 .text
+  clear: both
+  display: inline
   padding: 0.8em
-
+  width: 50%
