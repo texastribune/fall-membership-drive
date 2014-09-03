@@ -1,6 +1,4 @@
-.page-wrap
-  background: $white
-
+//Header & footer
 .header
   background-color: $head-foot-bg
   color: $textColor
@@ -25,16 +23,26 @@
     padding: 0.8em
     text-transform: uppercase
     vertical-align: middle
-    span
-      color: $trib-yellow
-      font-weight: normal
 
-footer
+span
+  color: #eee
+  font-weight: normal
+
+.footer
   background-color: $head-foot-bg
-  color: white
+  color: #eee
   height: 50px
-  padding-top: 0.2em
-  text-align: center
+  ul
+    padding-right: 2em
+    li
+      color: $trib-yellow
+      display: inline
+      font-size: 0.8em
+      padding: 0 0.2em 0 0.2em
+      a
+        color: $trib-yellow
+        text-decoration: none
+        font-size: 0.9em
 
 
 // Styles for content types used in themed sections
