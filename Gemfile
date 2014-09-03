@@ -18,3 +18,6 @@ gem "middleman-bourbon"
 
 # Adds in ability to use Neat
 gem "neat"
+
+# Minifies whitespace around HTML via Htmlcompressor
+gem "middleman-minify-html"
