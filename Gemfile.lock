@@ -139,4 +139,3 @@ DEPENDENCIES
   middleman-minify-html
   neat
   tzinfo-data
-  wdm (~> 0.1.0)
