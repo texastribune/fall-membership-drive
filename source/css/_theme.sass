@@ -1,0 +1,70 @@
+//Header & footer
+.header
+  background-color: $head-foot-bg
+  color: $textColor
+  height: 50px
+  position: fixed
+  width: 100%
+  z-index: 5 //to be sure it is seen over the flowing circular images
+  .wrapper
+    padding: 0.5em
+  .social-link
+    color: $textColor
+    float: left
+    font-size: 2em
+    padding: 0 0.5em
+  img
+    padding: 0 0.5em 0 1em
+  h1
+    color: $trib-yellow
+    display: inline-block
+    font-size: 0.8em
+    font-weight: 500
+    letter-spacing: 0.2em
+    padding: 0 0 0.8em 0.5em
+    text-transform: uppercase
+    vertical-align: middle
+
+.footer
+  background-color: $head-foot-bg
+  color: $textColor
+  height: 50px
+  ul
+    padding-right: 2em
+    li
+      color: $trib-yellow
+      display: inline
+      font-size: 0.8em
+      padding: 0 0.2em 0 0.2em
+      a
+        color: $trib-yellow
+        text-decoration: none
+        font-size: 0.9em
+
+span
+  color: $textColor
+  font-weight: normal
+
+
+// Styles for content types used in themed sections
+
+// Content flowing between sections
+.flow
+  border-radius: 200px
+  margin-bottom: -80px
+  padding: 2em
+  position: relative
+  z-index: 2
+
+.image-wrapper
+  width: 50%
+  text-align: center
+
+.image
+  padding: 2em 0.5em 0.5em 0.5em
+
+.text
+  clear: both
+  display: inline
+  padding: 0.8em
+  width: 50%
