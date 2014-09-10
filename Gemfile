@@ -18,3 +18,6 @@ gem "neat"
 
 # Minifies whitespace around HTML via Htmlcompressor
 gem "middleman-minify-html"
+
+# Pushes compiled site to S3 after middleman build
+gem "middleman-s3_sync"
