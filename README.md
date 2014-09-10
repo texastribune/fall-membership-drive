@@ -25,6 +25,8 @@ To build the site, run:
 
 When Middleman builds, it creates a static file for each file located in the source folder. The build process is configured in config.rb.
 
+Make sure that you've already installed the editorconfig plugin for your editor at http://editorconfig.org/#download to conform to the Tribune's coding styles.
+
 ## Deploying
 
 TODO
