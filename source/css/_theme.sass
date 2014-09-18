@@ -58,23 +58,23 @@ h2
   text-transform: uppercase
 
 .text-container
+  width: 70%
   clear: both
-  width: 50%
+  padding: 1em
+  @include media($tablet)
+    width: 100%
 
-// Content flowing between sections
-.flow
-  border-radius: 200px
-  margin-bottom: -80px
-  padding: 2em
-  position: relative
-  z-index: 2
-
-.image-wrapper
-  width: 50%
-  text-align: center
-
-.image
-  padding: 2em 0.5em 0.5em 0.5em
+.text-media-container
+  +span-columns(12)
+  clear: both
+  margin: 0 auto
+  .text-container
+    clear: none
+    margin-top: 5em
+    width: 60%
+    @include media($tablet)
+      margin-top: 0
+      width: 100%
 
 .text
   display: inline
@@ -82,3 +82,21 @@ h2
   margin: 0
   padding: 0
   width: 100%
+
+.flow
+  border-radius: 200px
+  margin-bottom: -80px
+  padding: 2em
+  position: relative
+  z-index: 2
+
+.image-container
+  @include media($tablet)
+    text-align: center
+
+.image
+  float: left
+  padding: 2em 0.5em 0.5em 0.5em
+  max-width: 100%
+  @include media($tablet)
+    float: none
