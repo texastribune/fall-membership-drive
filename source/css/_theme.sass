@@ -92,9 +92,22 @@ h2
   position: relative
   z-index: 2
 
-.image
+.image-container
   float: left
-  padding: 2em 0.5em 0.5em 0.5em
+  max-width: 100%
+
+.image
+  padding: 2em 0.5em 0 0.5em
   max-width: 100%
   @include media($tablet)
     float: none
+
+.image-info
+  float: right
+  line-height: 20px
+  overflow: auto
+  padding: 0 0.5em 0 0.5em
+
+cite
+  font-size: 0.6em
+  text-decoration: none
