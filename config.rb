@@ -17,3 +17,13 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 end
+
+# For s3 sync for deploying with middleman build
+activate :s3_sync do |config|
+  config.bucket = 'anniversary.texastribune.org'
+  config.region = 'us-east-1'
+  config.aws_access_key_id = ENV['AWS_ACCESS_KEY']
+  config.aws_secret_access_key = ENV['AWS_ACCESS_SECRET']
+  # Set this to true to deploy to s3
+  config.after_build = false
+end
