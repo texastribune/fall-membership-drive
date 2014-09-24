@@ -25,11 +25,21 @@
       <%= yield %>
     </div>
     <%= partial "footer" %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/skrollr.min.js"></script>
     <script type="text/javascript">
       window.onload = function() {
         var s = skrollr.init();
       };
+
+      // Make header sticky onscroll
+      jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > 500) {
+          jQuery('header').css({'position': 'fixed', 'top': 0});
+        } else {
+          jQuery('header').removeAttr('style');
+        }
+      });
     </script>
   </body>
 </html>
