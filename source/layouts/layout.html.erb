@@ -29,7 +29,9 @@
     <script type="text/javascript" src="js/skrollr.min.js"></script>
     <script type="text/javascript">
       window.onload = function() {
-        skrollr.init();
+        skrollr.init({
+          forceHeight: false
+        });
       };
 
       // Make header sticky onscroll
