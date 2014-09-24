@@ -38,8 +38,8 @@
       padding: 0 0.2em 0 0.2em
       a
         color: $trib-yellow
-        text-decoration: none
         font-size: 0.9em
+        text-decoration: none
 
 span
   color: $textColor
@@ -48,7 +48,43 @@ span
 
 // Styles for content types used in themed sections
 
-// Content flowing between sections
+// Headers
+h1
+  font-family: Helvetica
+
+h2
+  font-size: 1.2em
+  margin: 0 0 0.8em 0
+  text-transform: uppercase
+
+// Text styles
+.text-container
+  clear: both
+  padding: 1em
+  width: 70%
+  @include media($tablet)
+    width: 100%
+
+.text-media-container
+  +span-columns(12)
+  clear: both
+  margin: 0 auto
+  .text-container
+    clear: none
+    margin-top: 5em
+    width: 60%
+    @include media($tablet)
+      margin-top: 0
+      width: 100%
+
+.text
+  display: inline
+  font-size: 1em
+  margin: 0
+  padding: 0
+  width: 100%
+
+// Image styles
 .flow
   border-radius: 200px
   margin-bottom: -80px
@@ -56,15 +92,21 @@ span
   position: relative
   z-index: 2
 
-.image-wrapper
-  width: 50%
-  text-align: center
+.image-container
+  float: left
+  max-width: 100%
 
 .image
-  padding: 2em 0.5em 0.5em 0.5em
+  padding: 2em 0.5em 0 0.5em
+  max-width: 100%
+  @include media($tablet)
+    float: none
 
-.text
-  clear: both
-  display: inline
-  padding: 0.8em
-  width: 50%
+.image-info
+  float: left
+  line-height: 1.5em
+  overflow: auto
+  padding: 0 0.5em 0 0.5em
+
+cite
+  font-size: 0.6em
