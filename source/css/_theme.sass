@@ -47,6 +47,24 @@ span
 #navigator
   position: fixed
   right: 0
+  a
+    display: none
+
+li
+  list-style-type: none
+  padding: 0.2em 2em 0 2em
+  a
+    text-decoration: none
+
+.navigator-circles
+  background-color: black
+  -webkit-border-radius: 10px 10px 10px 10px
+  border-radius: 10px 10px 10px 10px
+  float: right
+  height: 1em
+  width: 1em
+  &:hover
+
 
 
 // Styles for content types used in themed sections
@@ -62,11 +80,18 @@ h2
 
 // Text styles
 .text-container
+  background-color: #eee
   clear: both
   padding: 1em
   width: 60%
   @include media($tablet)
     width: 100%
+
+.yellow-bg, .teal-bg
+  .text-container
+    background-color: transparent
+    margin: 0 auto
+    padding: 2em 0 2em 0
 
 .text-media-container
   +span-columns(12)
@@ -99,6 +124,9 @@ h2
   float: left
   max-width: 100%
 
+.image-center
+  text-align: center
+
 .image
   padding: 2em 0.5em 0 0.5em
   max-width: 100%
@@ -122,6 +150,10 @@ cite
   text-align: center
 
 #mission-model
+  background-image: url(http://s3.amazonaws.com/static.texastribune.org/media/images/VoterID-DOJ_jpg_800x1000_q100.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
+  height: 600px
 
 #investigative-reporting
 

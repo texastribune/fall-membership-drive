@@ -27,16 +27,21 @@
     <%= partial "footer" %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/skrollr.min.js"></script>
-    <script type="text/javascript">
-      window.onload = function() {
+    <script>
+     $(document).ready(function() {
+        // Initialize skrollr
         skrollr.init({
           forceHeight: false
         });
-      };
+
+        $('.navigator-circles').mouseover(function(event) {
+          console.log($(event.target));
+        });
+     });
 
       // Make header sticky onscroll
       jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > 500) {
+        if (jQuery(this).scrollTop() > 670) {
           jQuery('header').css({'position': 'fixed', 'top': 0});
         } else {
           jQuery('header').removeAttr('style');
