@@ -126,11 +126,21 @@ title: Fall Membership Drive | The Texas Tribune
         <img class="image" src="http://placekitten.com/600/200">
       </div>
     </div>
-    <div class="container dark-bg" id="events-transparency">
+    <div class="container dark-bg" id="events-transparency" style="text-align: center;">
       <a name="events-transparency"></a>
       <h1 class="secondary-header">Events and Transparency</h1>
-        <div class="image-center">
-          <img class="image" src="<%= lorem.image('800x200', :random_color => true, :text => 'Slider: Images of TribLive') %>">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="<%= lorem.image('800x400', :random_color => true, :text => 'Slider: Image 1') %>"/>
+            </li>
+            <li>
+              <img src="<%= lorem.image('800x400', :random_color => true, :text => 'Slider: Image 2') %>"/>
+            </li>
+            <li>
+              <img src="<%= lorem.image('800x400', :random_color => true, :text => 'Slider: Image 3') %>"/>
+            </li>
+          </ul>
         </div>
         <div class="text-container">
           <h2>1st TribLive</h2>
