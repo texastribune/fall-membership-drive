@@ -30,12 +30,8 @@
     <script>
      $(document).ready(function() {
         // Initialize skrollr
-        skrollr.init({
+        var s = skrollr.init({
           forceHeight: false
-        });
-
-        $('.navigator-circles').mouseover(function(event) {
-          console.log($(event.target));
         });
      });
 
