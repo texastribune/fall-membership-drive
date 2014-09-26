@@ -30,6 +30,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="//s3.amazonaws.com/cdn.texastribune.org/lib/jquery.flexslider/2.1/jquery.flexslider.js"></script>
+    <script src="js/jquery.knob.js"></script>
     <script>
       $(document).ready(function() {
         // Initialize skrollr
@@ -46,6 +47,15 @@
         // For TribLive images slider in Events section
         $('.flexslider').flexslider({
           animation: "slide"
+        });
+
+        // 2014 festival progress circle
+        $('.knob').knob({
+          'max': 5000,
+          'fgColor': 'rgb(255, 194, 0)',
+          'bgColor': '#eee',
+          'readOnly': true,
+          'rotation': 'anticlockwise'
         });
       });
 
