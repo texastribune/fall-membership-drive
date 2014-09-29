@@ -40,10 +40,6 @@
         font-size: 0.9em
         text-decoration: none
 
-span
-  color: $textColor
-  font-weight: normal
-
 
 // Styles for content types used in themed sections
 
@@ -54,30 +50,37 @@ span
 .teal-bg
   background-color: $trib-teal
 
+.salaries-teal-bg
+  background-color: $salaries-teal
+
 .dark-bg
-  background-color: #3c4961
+  background-color: $off-black
+
+.white-bg
+  background-color: $white
 
 // Headers
-h1
-  font-family: Helvetica, sans-serif
+.section-header
+  background-color: $white
+  text-align: center
+  h1
+    font-family: Helvetica, sans-serif
+    font-size: 2em
+    text-transform: uppercase
 
 h2
-  font-size: 1.2em
+  font-size: 1.6em
   margin: 0 0 0.8em 0
   text-transform: uppercase
 
 // Text styles
 .text-container
-  background-color: #eee
-  clear: both
-  padding: 1em
-  width: 60%
+  padding: 5em
   @include media($tablet)
     width: 100%
 
-
 // Background-specific styles
-.yellow-bg, .teal-bg, .dark-bg
+.yellow-bg, .teal-bg, .dark-bg, .salaries-teal-bg
   .text-container
     background-color: transparent
     margin: 0 auto
@@ -105,9 +108,6 @@ h2
   float: left
   max-width: 100%
 
-.image-center
-  text-align: center
-
 .image
   padding: 2em 0.5em 0 0.5em
   max-width: 100%
@@ -125,10 +125,10 @@ cite
 
 // Each section
 #welcome
-  background: #c0c0c0
   float: none
   height: 500px
-  text-align: center
+  .text-container
+    margin-top: 12em
 
 #mission-model
   background-image: url(http://s3.amazonaws.com/static.texastribune.org/media/images/VoterID-DOJ_jpg_800x1000_q100.jpg)
@@ -139,14 +139,22 @@ cite
 #investigative-reporting
 
 #tx-weekly
-  background-image: url(http://s3.amazonaws.com/static.texastribune.org/media/images/2014/09/23/laketexoma10_jpg_800x1000_q100.jpg)
-  background-repeat: no-repeat
-  background-size: 100%
   height: 700px
-  text-align: center
+  h1
+    color: $tw-teal
+    font-size: 6em
+    text-transform: uppercase
+  .counter
+    color: $tw-teal
+    font-size: 3.5em
 
 .counter
   font-size: 8em
+
+#bidness
+  background-image: url(http://s3.amazonaws.com/static.texastribune.org/media/images/2014/09/26/OPEN_BEACHES1323_jpg_474x1000_q100.jpg)
+  background-repeat: no-repeat
+  background-size: 100%
 
 #innovation-data
 
