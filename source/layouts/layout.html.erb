@@ -27,6 +27,7 @@
     <%= partial "footer" %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/skrollr.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="//s3.amazonaws.com/cdn.texastribune.org/lib/jquery.flexslider/2.1/jquery.flexslider.js"></script>
@@ -37,6 +38,8 @@
         var s = skrollr.init({
           forceHeight: false
         });
+
+        $('.video').fitVids();
 
         // For Texas Weekly counter
         $('.counter').counterUp({
