@@ -39,6 +39,12 @@
           forceHeight: false
         });
 
+        // On click of header links, make active
+        $('.header-link').on('click', function(e) {
+          $('.header-link').removeClass('active');
+          $(event.target).addClass('active');
+        });
+
         // Wrap videos and apply CSS for fluid width
         $('.video').fitVids();
 
@@ -67,10 +73,23 @@
 
       // Make header sticky onscroll
       jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > 600) {
+        if (jQuery(this).scrollTop() > 760) {
           jQuery('header').css({'position': 'fixed', 'top': 0});
         } else {
           jQuery('header').removeAttr('style');
+        }
+      });
+
+      // For transitioning background colors on scroll with body classes
+      jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() < 1200) {
+          jQuery('body').removeClass();
+        } else if (jQuery(this).scrollTop() > 1200 && jQuery(this).scrollTop() < 2000) {
+          jQuery('body').removeClass();
+          jQuery('body').addClass('yellow-bg');
+        } else if (jQuery(this).scrollTop() > 2000 && jQuery(this).scrollTop() < 5000) {
+          jQuery('body').removeClass();
+          jQuery('body').addClass('dark-bg');
         }
       });
     </script>

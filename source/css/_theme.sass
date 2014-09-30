@@ -4,7 +4,7 @@
   color: $textColor
   height: 50px
   width: 100%
-  z-index: 5 //to be sure it is seen over the flowing circular images
+  z-index: 5 //to be sure it is seen over everything
   .wrapper
     padding: 0.5em
   .social-link
@@ -12,17 +12,21 @@
     float: left
     font-size: 2em
     padding: 0 0.5em
-  img
-    padding: 0 0.5em 0 1em
-  h1
-    color: $trib-yellow
-    display: inline-block
-    font-size: 0.8em
-    font-weight: 500
-    letter-spacing: 0.2em
-    padding: 0 0 0.8em 0.5em
-    text-transform: uppercase
-    vertical-align: middle
+  ul
+    margin: 0
+    li
+      display: inline
+      &:last-child
+        a
+          color: $trib-yellow
+          text-transform: uppercase
+      a
+        color: $white
+        font-family: pt-sans, sans-serif
+        padding: 0 1.8em
+        text-decoration: none
+        &.active
+          background-color: $trib-teal
 
 .footer
   background-color: $head-foot-bg
@@ -73,6 +77,7 @@
 .section-header
   background-color: $white
   h1
+    color: $off-black
     font-family: 'league-gothic', sans-serif
     font-size: 3em
     font-weight: 300
