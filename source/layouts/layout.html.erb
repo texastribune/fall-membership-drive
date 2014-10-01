@@ -82,12 +82,23 @@
 
       // For transitioning background colors on scroll with body classes
       jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() < 1200) {
-          jQuery('body').removeClass();
-        } else if (jQuery(this).scrollTop() > 1200 && jQuery(this).scrollTop() < 2000) {
+        jQuery('body').removeClass();
+        if (jQuery(this).scrollTop() > 1300 && jQuery(this).scrollTop() < 2000) {
           jQuery('body').removeClass();
           jQuery('body').addClass('yellow-bg');
-        } else if (jQuery(this).scrollTop() > 2000 && jQuery(this).scrollTop() < 5000) {
+        } else if (jQuery(this).scrollTop() > 2000 && jQuery(this).scrollTop() < 3115) {
+          jQuery('body').removeClass();
+          jQuery('body').addClass('dark-bg');
+        } else if (jQuery(this).scrollTop() > 3115 && jQuery(this).scrollTop() < 4610) {
+          jQuery('body').removeClass();
+          jQuery('body').addClass('white-bg');
+        } else if (jQuery(this).scrollTop() > 4710 && jQuery(this).scrollTop() < 5290) {
+          jQuery('body').removeClass();
+          jQuery('body').addClass('salaries-teal-bg');
+        } else if (jQuery(this).scrollTop() > 5290 && jQuery(this).scrollTop() < 6220) {
+          jQuery('body').removeClass();
+          jQuery('body').addClass('teal-bg');
+        } else if (jQuery(this).scrollTop() > 6220 && jQuery(this).scrollTop() < 8000) {
           jQuery('body').removeClass();
           jQuery('body').addClass('dark-bg');
         }
