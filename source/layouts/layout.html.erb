@@ -30,8 +30,6 @@
     <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    <script src="//s3.amazonaws.com/cdn.texastribune.org/lib/jquery.flexslider/2.1/jquery.flexslider.js"></script>
-    <script src="js/jquery.knob.js"></script>
     <script>
       $(document).ready(function() {
         // Initialize skrollr
@@ -53,17 +51,6 @@
           delay: 50,
           time: 3000
         });
-
-        // 2014 festival progress circle
-        $('.knob').knob({
-          'max': 5000,
-          'fgColor': 'rgb(255, 194, 0)',
-          'bgColor': '#eee',
-          'readOnly': true,
-          'rotation': 'anticlockwise',
-          'width': '150',
-          'height': '150'
-        });
       });
 
       // Make header sticky onscroll
@@ -72,30 +59,6 @@
           jQuery('header').css({'position': 'fixed', 'top': 0});
         } else {
           jQuery('header').removeAttr('style');
-        }
-      });
-
-      // For transitioning background colors on scroll with body classes
-      jQuery(window).scroll(function() {
-        jQuery('body').removeClass();
-        if (jQuery(this).scrollTop() > 1300 && jQuery(this).scrollTop() < 2000) {
-          jQuery('body').removeClass();
-          jQuery('body').addClass('yellow-bg');
-        } else if (jQuery(this).scrollTop() > 2000 && jQuery(this).scrollTop() < 3115) {
-          jQuery('body').removeClass();
-          jQuery('body').addClass('dark-bg');
-        } else if (jQuery(this).scrollTop() > 3115 && jQuery(this).scrollTop() < 4610) {
-          jQuery('body').removeClass();
-          jQuery('body').addClass('white-bg');
-        } else if (jQuery(this).scrollTop() > 4710 && jQuery(this).scrollTop() < 5290) {
-          jQuery('body').removeClass();
-          jQuery('body').addClass('salaries-teal-bg');
-        } else if (jQuery(this).scrollTop() > 5290 && jQuery(this).scrollTop() < 6220) {
-          jQuery('body').removeClass();
-          jQuery('body').addClass('teal-bg');
-        } else if (jQuery(this).scrollTop() > 6220 && jQuery(this).scrollTop() < 8000) {
-          jQuery('body').removeClass();
-          jQuery('body').addClass('dark-bg');
         }
       });
     </script>
