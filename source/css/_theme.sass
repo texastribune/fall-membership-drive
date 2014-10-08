@@ -1,14 +1,14 @@
 //Header & footer
 .header
-  background-color: $head-foot-bg
-  color: $textColor
+  background-color: $bg-head-foot
+  color: $text-bg-dark
   height: 50px
   width: 100%
   z-index: 5 //to be sure it is seen over everything
   .wrapper
     padding: 0.5em
   .social-link
-    color: $textColor
+    color: $text-bg-dark
     float: left
     font-size: 2em
     padding: 0 0.5em
@@ -18,74 +18,79 @@
       display: inline
       &:last-child
         a
-          color: $trib-yellow
+          color: $yellow-trib
       a
         color: $white
-        font-family: pt-sans, sans-serif
+        font-family: $pt-sans
         padding: 0 1.8em
         text-decoration: none
         &.active
-          background-color: $trib-teal
+          background-color: $teal-trib
 
 .footer
-  background-color: $head-foot-bg
-  color: $textColor
+  background-color: $bg-head-foot
+  color: $text-bg-dark
   height: 50px
   ul
     padding-right: 2em
     li
-      color: $trib-yellow
+      color: $yellow-trib
       display: inline
       font-size: 0.8em
-      padding: 0 0.2em 0 0.2em
+      padding: 0 0.2em
       a
-        color: $trib-yellow
+        color: $yellow-trib
         font-size: 0.9em
         text-decoration: none
 
 
+
 // Styles for content types used in themed sections
 
-// Backgrounds for chunks
+// Background-specific styles
 .avocado-bg
-  background-color: $tribtalk-avocado
+  background-color: $bg-tribtalk
 
 .blue-bg
-  background-color: $social-blue
+  background-color: $bg-social
 
 .dark-bg
-  background-color: $off-black
+  background-color: $black
 
 .grey-bg
-  background-color: $dark-grey
-  border: 2em solid $member-drive-tan
+  background-color: $grey-dark
+  border: 2em solid $border-member-drive
 
 .salaries-teal-bg
-  background-color: $salaries-teal
+  background-color: $bg-salaries
 
 .teal-bg
-  background-color: $trib-teal
+  background-color: $teal-trib
 
 .white-bg
   background-color: $white
 
 .yellow-bg
-  background-color: $trib-yellow
+  background-color: $yellow-trib
+
+.dark-bg, .grey-bg, .blue-bg
+  color: $text-bg-dark
+
 
 // Headers
 .section-header
   background-color: $white
   padding: 0 9em !important
   h1
-    color: $off-black
-    font-family: 'league-gothic', sans-serif
+    color: $black
+    font-family: $league-gothic
     font-size: 3em
     font-weight: 300
     line-height: 1.1em
     text-transform: uppercase
 
 h2
-  font-family: pt-sans, sans-serif
+  font-family: $pt-sans
   font-size: 1.3em
   font-weight: 700
   letter-spacing: 1px
@@ -93,9 +98,10 @@ h2
   margin: 0 0 0.4em 0
   text-transform: uppercase
 
+
 // Text styles
 .text-container
-  padding: 1em 0 1em 0
+  padding: 1em 0
   &.small
     width: 40%
     @include media($tablet)
@@ -109,18 +115,15 @@ h2
     @include media($tablet)
       width: 100%
 
-// Background-specific styles
-.dark-bg, .grey-bg, .blue-bg
-  color: white
-
 .text
   display: inline
-  font-family: pt-sans, sans-serif
+  font-family: $pt-sans
   font-size: 1em
   font-weight: 200
   margin: 0
   padding: 0
   width: 100%
+
 
 // Image styles
 .image-container
@@ -135,6 +138,7 @@ h2
 canvas
   padding: 0 0.2em 0 0.2em
 
+
 // Each section, in order of appearance
 #welcome
   float: none
@@ -142,8 +146,8 @@ canvas
 
 #tx-weekly
   .counter
-    color: $tw-teal
-    font-family: 'league-gothic', sans-serif
+    color: $bg-texas-weekly
+    font-family: $league-gothic
     font-size: 3em
     font-weight: 600
     letter-spacing: 0.03em
