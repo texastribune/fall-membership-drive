@@ -6,13 +6,13 @@ title: Fall Membership Drive | The Texas Tribune
   <div class="container section-header center">
     <h1>OUR <span style="color: #ffc200;">STORY</span></h1>
   </div>
-  <div class="container" id="mission-model" data-center="opacity: 1;" data-top-bottom="opacity: 0.5;" data-bottom-top="background-position: 50% 0px; opacity: 0;">
+  <div class="container" id="mission-model">
     <div class="text-container left small">
       <h2>The News Crisis</h2>
         <p class="text">The global recession in 2008 and 2009 put increased pressure on an already declining commercial print and broadcast news industry. Faced with declining circulation, advertising losses and a new wave of digital competitors, the news industry struggled mightily. Texas certainly wasn’t spared. The reporting corps in the statehouse had dwindled, and options for in-depth coverage of state politics and public policy were quickly drying up.</p>
     </div>
   </div>
-  <div class="container" style="padding-top: 10em; padding-bottom: 10em;" data-400="opacity: 0;" data-900="opacity: 0.5;" data-1100="opacity: 1;">
+  <div class="container" style="padding-top: 10em; padding-bottom: 10em;">
     <div class="inner-wrap">
       <div class="text-container left small">
         <h2>A New Way</h2>
@@ -23,7 +23,7 @@ title: Fall Membership Drive | The Texas Tribune
       </div>
     </div>
   </div>
-  <div class="scroll-wrap" style="padding-top: 15em; padding-bottom: 15em;" data-top="background-position: 50% 0px; opacity: 1;" data-bottom-top="background-position: 50% 100px; opacity: 0;">
+  <div class="scroll-wrap" style="padding-top: 15em; padding-bottom: 15em;">
     <div class="container">
       <div class="inner-wrap">
         <div class="text-container large">
@@ -42,23 +42,7 @@ title: Fall Membership Drive | The Texas Tribune
   <div class="container section-header center">
     <h1>INNOVATION WITH <span style="color: #ffc200;">DATA</span></h1>
   </div>
-  <!-- <div class="container bg white-bg">
-    <div class="inner-wrap">
-      <div class="center">
-        <img class="image" src="/img/Election-img.png">
-      </div>
-      <div class="text-container" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
-        <h2>Election scoreboard</h2>
-        <p class="text"><%= lorem.sentences 5 %></p>
-      </div>
-      <div class="center">
-        <img class="image" src="http://placekitten.com/250/200">
-        <img class="image" src="http://placekitten.com/250/200">
-        <img class="image" src="http://placekitten.com/250/200">
-      </div>
-    </div>
-  </div> -->
-  <div class="container center" id="filibuster" data-center="background-position: 50% 0px; opacity: 1;" data-bottom-top="background-position: 50% 100px; opacity: 0;">
+  <div class="container center" id="filibuster">
     <div class="inner-wrap">
       <div class="text-container large" style="margin: 0 auto; color: #ffffff;">
         <h2>Livestream: 83rd & Filibuster</h2>
@@ -73,16 +57,11 @@ title: Fall Membership Drive | The Texas Tribune
         <p class="text"><%= lorem.sentences 7 %></p>
       </div>
       <div class="center">
-        <img class="image" src="/img/kickstarter-logo.png" style="width: 20%; position: absolute;" data-center="left: 7em; opacity: 0;" data-bottom-top="left: -15em; opacity: 1;">
-        <img class="image" src="/img/TxTrib-logo.svg" style="width: 20%;" data-center="opacity: 0;" data-bottom-top="opacity: 1;">
-        <img class="image" src="/img/livestream-logo.png" style="width: 20%; position: absolute;" data-center="right: 7em; opacity: 0;" data-bottom-top="right: -15em; opacity: 1;">
-      </div>
-      <div class="center" style="padding-top: 1.5em;">
-        <img class="image" src="/img/txtrib-livestream-logo.png" style="width: 20%;" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+        <img class="image" src="<%= lorem.image('800x200', :random_color => true, :text => 'Livestream gif') %>">
       </div>
     </div>
   </div>
-  <div class="container" style="padding-top: 8em; padding-bottom: 8em;" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="container" style="padding-top: 8em; padding-bottom: 8em;">
     <div class="inner-wrap">
       <div class="text-container medium left">
         <h2>Interactives: Salaries, Hospitals, Public School and Higher Education</h2>
@@ -97,26 +76,26 @@ title: Fall Membership Drive | The Texas Tribune
   <div class="container section-header center">
     <h1>Award-winning Investigative <span style="color: #ffc200;">Reporting</span></h1>
   </div>
-  <div class="container" style="padding-top: 8em;" data-top="opacity: 1;" data-center="opacity: 0.5;" data-bottom-top="opacity: 0;">
+  <div class="container" style="padding-top: 8em;">
     <div class="inner-wrap">
       <div class="center">
         <img class="image" src="<%= lorem.image('800x200', :random_color => true, :text => 'Image: PerryTracker') %>">
       </div>
     </div>
   </div>
-  <div class="container" style="padding-bottom: 8em;" id="perry-coverage" data-center-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="container" style="padding-bottom: 8em;" id="perry-coverage">
     <div class="inner-wrap">
       <div class="text-container medium left" style="margin-top: 4em">
         <h2>Perry coverage intensifies</h2>
         <p class="text"><%= lorem.sentences 7 %></p>
       </div>
-      <img class="image mobile-hide" data-center="opacity: 1; left: -330px;" data-bottom-top="opacity: 0; left: -640px;" data-anchor-target="#perry-coverage" style="position: relative; margin-top: -80px;" src="<%= lorem.image('100x100', :random_color => true, :text => 'Plane Graphic') %>">
+      <img class="image mobile-hide" style="position: relative; margin-top: -80px;" src="<%= lorem.image('100x100', :random_color => true, :text => 'Plane Graphic') %>">
       <div class="image-container right" style="width: 30%;">
         <img class="image" src="http://s3.amazonaws.com/static.texastribune.org/media/images/2014/09/21/xxTribFest_Perry392_jpg_800x1000_q100.jpg">
       </div>
     </div>
   </div>
-  <div class="container" id="tx-weekly" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="container" id="tx-weekly">
       <div class="image-center">
         <img class="image" src="/img/TW-logo-teal.png">
       </div>
@@ -132,7 +111,7 @@ title: Fall Membership Drive | The Texas Tribune
         </div>
       </div>
   </div>
-  <div class="container" id="bidness" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="container" id="bidness">
     <div class="inner-wrap">
       <div class="image-container">
         <img class="image" src="<%= lorem.image('100x100', :random_color => true, :text => 'Icon') %>">
@@ -143,7 +122,7 @@ title: Fall Membership Drive | The Texas Tribune
       </div>
     </div>
   </div>
-  <div class="scroll-wrap" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="scroll-wrap">
     <div class="container">
       <div class="inner-wrap">
         <div class="center">
@@ -159,7 +138,7 @@ title: Fall Membership Drive | The Texas Tribune
         <img src="<%= lorem.image('600x300', :random_color => true, :text => 'TBD') %>"/>
     </div>
   </div>
-  <div class="scroll-wrap" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="scroll-wrap">
     <div class="container">
       <div class="inner-wrap">
         <div class="text-container large">
@@ -178,7 +157,7 @@ title: Fall Membership Drive | The Texas Tribune
   <div class="container section-header center">
     <h1><span style="color: #ffc200;">EVENTS</span> AND TRANSPARENCY</h1>
   </div>
-  <div class="container" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="container">
     <div class="inner-wrap">
       <div class="center">
         <img src="/img/tribLIVE-white-logo.png" style="width: 100%;">
@@ -191,14 +170,14 @@ title: Fall Membership Drive | The Texas Tribune
   </div>
   <div class="container" id="lege-session" style="height: 400px;">
     <div class="inner-wrap">
-      <img class="image left" data-top="left: 0;" data-center="left: -1600px;" data-anchor-target="#lege-session" style="position: relative;" src="<%= lorem.image('200x200', :random_color => true, :text => 'Animated lege icon') %>">
+      <img class="image left" style="position: relative;" src="<%= lorem.image('200x200', :random_color => true, :text => 'Animated lege icon') %>">
       <div class="text-container right medium">
         <h2>1st Legislative Session</h2>
         <p class="text"><%= lorem.sentences 7 %></p>
       </div>
     </div>
   </div>
-  <div class="container" id="tt-fest" data-center="opacity: 1;" data-bottom-top="opacity: 0;">
+  <div class="container" id="tt-fest">
     <div class="inner-wrap">
       <div class="center">
         <img class="image" src="/img/TxTribFest-logo.png">
@@ -217,7 +196,7 @@ title: Fall Membership Drive | The Texas Tribune
       </div>
       <div class="center">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="500px" height="500px" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
-          <path style="fill: none; stroke: #222; stroke-width: 10px; stroke-dasharray: 0px, 400px; stroke-dashoffset: 0;" data-center="stroke-dasharray:0px, 400px;" data-bottom-top="stroke-dasharray:400px, 400px;" d="M451.4,242.1l-1-1.6l-1.1-4.7l-6.9-10l-2.1-6.6l-4.8-7.3l-1.2-6.6l-1.9-15.6l-1.4-16l-1.7-16.7l-3.3-1.5
+          <path style="fill: none; stroke: #222; stroke-width: 10px; stroke-dasharray: 0px, 400px; stroke-dashoffset: 0;" d="M451.4,242.1l-1-1.6l-1.1-4.7l-6.9-10l-2.1-6.6l-4.8-7.3l-1.2-6.6l-1.9-15.6l-1.4-16l-1.7-16.7l-3.3-1.5
     l-5.3,1.7l-4.2-2.5l-4.6-2.1l-5.9-1.5l-4.9-2.5l-2.5-3l-2.8-0.3l-3.9,2.3l-7,0.4l-0.7-1.8l-1.1,0.1l-4.9,2.9l-3.2-1.1l-6.1,0.3
     l-1.2,4.2l-3.5,1.4l-5.5-1l-5.6-1.7l-7.4-1.3l-2-3l-0.6,0l-2.9,6.9l-4.4,0.6l-7.8-2.9l-0.9-3l-3.9-0.1l-2.5-0.5l-4.4,3.2l-5.2-1.7
     l0.1-3.3l-1.8-0.4l-3.6-4.4l-4.6-0.4l-5.2,2.9l-3.8-2.8l-6.6-0.5l-4.5-1.1l-7.1-1.3l0.2-5.6l-1.9-0.6l-2.6,1.3l-2.9-0.6l-1.5-1.4

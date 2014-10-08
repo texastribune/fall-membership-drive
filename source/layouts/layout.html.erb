@@ -26,17 +26,11 @@
       <%= yield %>
     <%= partial "footer" %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/skrollr.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script>
       $(document).ready(function() {
-        // Initialize skrollr
-        var s = skrollr.init({
-          forceHeight: false
-        });
-
         // On click of header links, make active
         $('.header-link').on('click', function(e) {
           $('.header-link').removeClass('active');
