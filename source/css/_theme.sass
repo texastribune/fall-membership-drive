@@ -82,18 +82,21 @@ h2
 // Text styles
 .text-container
   padding: 1em 0
-  &.small
-    width: 40%
-    @include media($tablet)
-      width: 100%
-  &.medium
-    width: 50%
-    @include media($tablet)
-      width: 100%
-  &.large
-    width: 90%
-    @include media($tablet)
-      width: 100%
+
+.small
+  width: 40%
+  @include media($tablet)
+    width: 100%
+
+.medium
+  width: 50%
+  @include media($tablet)
+    width: 100%
+
+.large
+  width: 90%
+  @include media($tablet)
+    width: 100%
 
 .text
   display: inline
@@ -118,10 +121,11 @@ canvas
   padding: 0 0.2em 0 0.2em
 
 .counter
-  color: $teal
+  border-bottom: 2px solid $yellow-trib
+  color: $white
   font-family: $league-gothic
-  font-size: 3em
-  font-weight: 600
+  font-size: 2.5em
+  font-weight: 400
   letter-spacing: 0.03em
   line-height: 1.3em
 
@@ -145,7 +149,7 @@ canvas
   background-image: url(http://s3.amazonaws.com/static.texastribune.org/media/images/PerryHoldsTEF_1_jpg_312x1000_q100.jpg)
   background-repeat: no-repeat
   background-size: cover
-  height: 800px
+  height: 400px
 
 #triblive
   background-color: transparent
