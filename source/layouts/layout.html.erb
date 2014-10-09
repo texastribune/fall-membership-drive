@@ -24,11 +24,12 @@
   <body>
       <%= partial "header" %>
       <%= yield %>
-    <%= partial "footer" %>
+      <%= partial "footer" %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
+    <script src="js/parallax.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script>
       $(document).ready(function() {
@@ -50,7 +51,7 @@
 
           $('html, body').stop().animate({
             'scrollTop': $target.offset().top
-          }, 900, 'swing', function () {
+          }, 2500, 'swing', function () {
             window.location.hash.target;
           })
         })
