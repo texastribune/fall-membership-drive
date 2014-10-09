@@ -28,15 +28,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script>
       $(document).ready(function() {
-        // On click of header links, make active
-        $('.header-link').on('click', function(e) {
-          $('.header-link').removeClass('active');
-          $(event.target).addClass('active');
-        });
-
         // Wrap videos and apply CSS for fluid width
         $('.video').fitVids();
 
@@ -47,13 +42,41 @@
         });
       });
 
-      // Make header sticky onscroll
-      jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > 618) {
-          jQuery('header').css({'position': 'fixed', 'top': 0});
-        } else {
-          jQuery('header').removeAttr('style');
-        }
+      // Using waypoints to change active nav class
+      $('#story').waypoint(function() {
+        $('.header-link').removeClass('active');
+        $('.header-link[href=#story]').addClass('active');
+      });
+
+      $('#data').waypoint(function() {
+        $('.header-link').removeClass('active');
+        $('.header-link[href=#data]').addClass('active');
+      });
+
+      $('#awards').waypoint(function() {
+        $('.header-link').removeClass('active');
+        $('.header-link[href=#awards]').addClass('active');
+      });
+
+      $('#events').waypoint(function() {
+        $('.header-link').removeClass('active');
+        $('.header-link[href=#events]').addClass('active');
+      });
+
+      $('#engagement').waypoint(function() {
+        $('.header-link').removeClass('active');
+        $('.header-link[href=#engagement]').addClass('active');
+      });
+
+      $('#donate').waypoint(function() {
+        $('.header-link').removeClass('active');
+        $('.header-link[href=#donate]').addClass('active');
+      });
+
+      // Make header sticky when reaches top of viewport
+      // Works with .stuck class in CSS, which fixes it to top
+      $('header').waypoint('sticky', {
+        offset: 0
       });
     </script>
   </body>
