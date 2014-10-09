@@ -40,6 +40,20 @@
           delay: 50,
           time: 3000
         });
+
+        // For smooth animation to anchor links
+        $('a[href^="#').on('click', function(e) {
+          e.preventDefault();
+
+          var target = this.hash,
+          $target = $(target);
+
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+          }, 900, 'swing', function () {
+            window.location.hash.target;
+          })
+        })
       });
 
       // Using waypoints to change active nav class
