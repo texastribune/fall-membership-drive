@@ -17,7 +17,11 @@
   ul
     margin: 0
     li
-      display: inline
+      display: inline-block
+      height: 50px
+      padding-top: 1em
+      &.active
+        background-color: $teal-trib
       &:last-child
         a
           color: $yellow-trib
@@ -26,8 +30,6 @@
         font-family: $pt-sans
         padding: 0 1.8em
         text-decoration: none
-        &.active
-          background-color: $teal-trib
 
 .footer
   background-color: $bg-head-foot

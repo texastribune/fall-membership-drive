@@ -58,33 +58,33 @@
 
       // Using waypoints to change active nav class
       $('#story').waypoint(function() {
-        $('.header-link').removeClass('active');
-        $('.header-link[href=#story]').addClass('active');
+        $('.header li').removeClass('active');
+        $('.header-link[href=#story]').closest('li').addClass('active');
       });
 
       $('#data').waypoint(function() {
-        $('.header-link').removeClass('active');
-        $('.header-link[href=#data]').addClass('active');
+        $('.header li').removeClass('active');
+        $('.header-link[href=#data]').closest('li').addClass('active');
       });
 
       $('#awards').waypoint(function() {
-        $('.header-link').removeClass('active');
-        $('.header-link[href=#awards]').addClass('active');
+        $('.header li').removeClass('active');
+        $('.header-link[href=#awards]').closest('li').addClass('active');
       });
 
       $('#events').waypoint(function() {
-        $('.header-link').removeClass('active');
-        $('.header-link[href=#events]').addClass('active');
+        $('.header li').removeClass('active');
+        $('.header-link[href=#events]').closest('li').addClass('active');
       });
 
       $('#engagement').waypoint(function() {
-        $('.header-link').removeClass('active');
-        $('.header-link[href=#engagement]').addClass('active');
+        $('.header li').removeClass('active');
+        $('.header-link[href=#engagement]').closest('li').addClass('active');
       });
 
       $('#donate').waypoint(function() {
-        $('.header-link').removeClass('active');
-        $('.header-link[href=#donate]').addClass('active');
+        $('.header li').removeClass('active');
+        $('.header-link[href=#donate]').closest('li').addClass('active');
       });
 
       // Make header sticky when reaches top of viewport
