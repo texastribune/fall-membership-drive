@@ -3,8 +3,9 @@
 // Center images for tablet down
 .image-container
   @include media($tablet)
-    float: none
-    text-align: center
+    // find a better way instead of overriding these
+    float: none !important
+    text-align: center !important
 
 // Don't show on mobile
 .mobile-hide
