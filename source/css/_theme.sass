@@ -1,5 +1,3 @@
-@import 'compass/css3/animation'
-
 //Header & footer
 .header
   background-color: $bg-head-foot
@@ -21,6 +19,8 @@
       padding-top: 1em
       &.active
         background-color: $teal-trib
+      &:hover
+        border-bottom: 2px solid $yellow-trib
       &:last-child
         a
           color: $yellow-trib
@@ -70,6 +70,11 @@
     font-weight: 300
     line-height: 1.1em
     text-transform: uppercase
+  &:before
+    display: block
+    content: " "
+    height: 50px
+    visibility: hidden
 
 h2
   font-family: $pt-sans
@@ -82,6 +87,12 @@ h2
 
 .yellow
   color: $yellow-trib
+
+.yellow-bg
+  background-color: $yellow-trib
+
+.white
+  color: $white
 
 // Quote sections
 .quote
