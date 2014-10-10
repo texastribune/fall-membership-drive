@@ -109,9 +109,11 @@ h2
 .white
   color: $white
 
+.black
+  color: $black
+
 // Quote sections
 .quote
-  color: $black
   font-family: $league-gothic
   font-size: 1.4em
   font-weight: 300
@@ -122,7 +124,6 @@ h2
 //Font Awesome
 // intro arrow
 .fa-arrow-down
-  color: $black
   font-size: 3em
 
 // Star dividers
@@ -146,9 +147,7 @@ h2
     +span-columns(12)
 
 .large
-  +span-columns(10)
-  @include media($tablet)
-    +span-columns(12)
+  +span-columns(12)
 
 .text
   display: inline
@@ -169,6 +168,13 @@ h2
   @include media($tablet)
     float: none
 
+.image-wrap
+  +span-columns(4)
+  padding: 3em 0 0 1em
+
+.top-image
+  padding-bottom: 6em
+
 canvas
   padding: 0 0.2em 0 0.2em
 
@@ -179,7 +185,7 @@ table
   width: 100%
 
 .counter-wrapper
-  padding: 2em 0 1em 0
+  padding: 0 0 1em 0
 
 .counter
   font-family: $league-gothic
