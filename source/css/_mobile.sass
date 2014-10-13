@@ -7,6 +7,25 @@
     float: none !important
     text-align: center !important
 
-// Don't show on mobile
+// Hide for mobile
 .mobile-hide
+  @include media($mobile)
+    display: none
+
+
+// Mobile menu styles
+.slicknav_menu
   display: none
+  @include media($mobile)
+    display: block
+
+.js
+  #menu
+    @include media($mobile)
+      display: none
+
+.slicknav_nav
+  li
+    &:last-child
+      a
+        color: $yellow-trib

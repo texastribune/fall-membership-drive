@@ -26,6 +26,7 @@
       <%= yield %>
       <%= partial "footer" %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
@@ -55,6 +56,10 @@
             window.location.hash.target;
           })
         })
+
+        $('#menu').slicknav();
+
+        $('#menu').addClass('stuck');
       });
 
       // For arrow transition between sections
