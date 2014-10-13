@@ -27,6 +27,8 @@
         background-color: $teal-trib
       &:hover
         border-bottom: 2px solid $yellow-trib
+        a
+          color: #f0f0f0
       &:last-child
         a
           color: $yellow-trib
@@ -34,6 +36,7 @@
         color: $text-header
         font-family: $pt-sans
         font-size: 1em
+        font-weight: 800
         padding: 0 1.8em
         text-decoration: none
         @include media($tablet)
@@ -69,10 +72,6 @@
 
 // Styles for content types used in themed sections
 
-// For parallax
-.transparent
-  background-color: transparent
-
 // Headers
 .section-header
   padding: 0 9em
@@ -100,6 +99,8 @@ h2
   margin: 0 0 0.4em 0
   text-transform: uppercase
 
+
+// Colors and backgrounds
 .black
   color: $black
 
@@ -114,6 +115,21 @@ h2
 
 .white
   color: $white
+
+// For arrow to transition between sections
+.section-arrow
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGQzIwMCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
+  background-position: top center
+  background-repeat: no-repeat
+  background-size: 100% 0
+  @include transition(background-size 0.5s ease-in-out)
+
+.bg-size-appear
+  background-size: 100% 100%
+
+// For parallax
+.transparent
+  background-color: transparent
 
 
 // Quote sections
@@ -141,7 +157,7 @@ h2
 
 //Font Awesome
 // intro arrow
-.fa-arrow-down
+.fa-angle-double-down
   font-size: 3em
 
 // Star dividers
@@ -153,19 +169,6 @@ h2
 // Text styles
 .text-container
   padding: 1.5em 0
-
-.small
-  +span-columns(4)
-  @include media($tablet)
-    +span-columns(12)
-
-.medium
-  +span-columns(6)
-  @include media($tablet)
-    +span-columns(12)
-
-.large
-  +span-columns(12)
 
 .text
   display: inline
@@ -191,10 +194,14 @@ h2
   padding: 3em 0 0 1em
 
 .top-image
-  padding-bottom: 6em
+  margin-bottom: 6em
+
+.newsletter-image
+  height: 40px
 
 canvas
   padding: 0 0.2em 0 0.2em
+
 
 // For stat counters
 table
@@ -204,6 +211,7 @@ table
 
 .counter-wrapper
   padding: 0 0 1em 0
+  width: 150px
   hr
     border-top: 3px solid $yellow-trib
 
@@ -218,10 +226,4 @@ table
   font-family: $league-gothic
   font-size: 1.2em
   text-transform: uppercase
-
-
-// Each section, in order of appearance
-#welcome
-  float: none
-  height: 500px
 

@@ -1,3 +1,4 @@
+// Outer wrapper
 .wrapper
   +outer-container
   max-width: 100%
@@ -10,6 +11,30 @@
   @include media($tablet)
     padding: 1em 0
 
+// Inner wrap, mostly used inside .container
+.inner-wrap
+  margin: 0 auto
+  max-width: 1000px
+  padding: 0 7em
+  position: relative
+  @include media($tablet)
+    padding: 1em
+
+// Determine columns spanned by element
+.small
+  +span-columns(4)
+  @include media($tablet)
+    +span-columns(12)
+
+.medium
+  +span-columns(6)
+  @include media($tablet)
+    +span-columns(12)
+
+.large
+  +span-columns(12)
+
+// Provide element heights where appropriate
 .tall
   height: 800px
 
@@ -19,20 +44,14 @@
 .short
   height: 400px
 
-.inner-wrap
-  margin: 0 auto
-  max-width: 1000px
-  padding: 0 7em
-  position: relative
-  @include media($tablet)
-    padding: 1em
-
+// Floating
 .right
   float: right !important
 
 .left
   float: left
 
+// Centering and clearing
 .center
   text-align: center
 
