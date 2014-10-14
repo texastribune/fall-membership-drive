@@ -54,19 +54,51 @@
 
 .footer
   background-color: $bg-head-foot
+  clear: both
   color: $white
-  height: 50px
-  ul
-    padding-right: 2em
+  margin: 0
+  padding: 1em 0
+  position: absolute
+  text-align: center
+  width: 100%
+  @include media($desktop)
+    padding: 0
+    text-align: none
+  nav
+    ul
+      list-style: none
+      padding: 0
+    font-size: .875em
+    @include media($desktop)
+      float: left
+      font-size: .75em
+      margin: 0 0 1em
+  .first-nav
+    color: $yellow-trib
+    @include media($desktop)
+      float: left
     li
+      padding: 0
+    a
       color: $yellow-trib
+      text-decoration: none
+  .last-nav
+    @include media($desktop)
+      float: right
+    a
+      color: $white
+      text-decoration: none
+  li
+    margin: .75em 0
+    @include media($desktop)
+      border-left: 1px solid $yellow-trib
       display: inline
-      font-size: 0.8em
-      padding: 0 0.2em
-      a
-        color: $yellow-trib
-        font-size: 0.9em
-        text-decoration: none
+      float: left
+      margin: 0
+      padding: 0 .5em
+      &:first-child
+        border: 0
+        padding-left: 0
 
 
 
