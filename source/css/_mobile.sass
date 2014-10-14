@@ -18,17 +18,16 @@
   display: none
   @include media($mobile)
     display: block
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 2
 
-.js
-  #menu
-    @include media($mobile)
-      display: none
+#menu
+  display: none
 
 .slicknav_nav
   li
     &:last-child
       a
         color: $yellow-trib
-
-.sticky-wrapper
-  background-color: $bg-head-foot
