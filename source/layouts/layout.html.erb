@@ -97,6 +97,10 @@
         $('.header-link[href=#donate]').closest('li').addClass('active');
       }, {offset: 20});
 
+      $('#donate').waypoint(function() {
+        $(this).addClass('yellow-bg');
+      }, {offset: "30%"});
+
       // Make header sticky when reaches top of viewport
       // Works with .stuck class in CSS, which fixes it to top
       $('header').waypoint('sticky', {

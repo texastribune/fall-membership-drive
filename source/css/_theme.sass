@@ -196,7 +196,7 @@ h2
 
 // Text styles
 .text-container
-  padding: 0.5em 0 1em 0
+  padding: 1em
 
 .text
   display: inline
@@ -211,6 +211,7 @@ h2
 // Image styles
 .image-container
   max-width: 100%
+  padding: 1em
 
 .image
   max-width: 100%
@@ -223,11 +224,9 @@ h2
   @include media($mobile)
     +span-columns(6)
 
-.top-image
-  margin-bottom: 6em
-
 .newsletter-image
   height: 40px
+  margin: 2em 0
 
 .logo
   width: 85%
@@ -249,18 +248,19 @@ table
     border-style: none
     border-top: 3px solid $yellow-trib
     color: $yellow-trib
-    margin: 0
+    margin: 0 0 0.3em 0
 
 .counter
   font-family: $league-gothic
   font-size: 2.5em
   font-weight: 400
-  letter-spacing: 0.03em
+  letter-spacing: .03em
   line-height: 1.3em
 
 .counter-label
   font-family: $pt-sans
   font-size: 1em
   letter-spacing: .03em
+  margin: 0
   text-transform: uppercase
 
