@@ -42,19 +42,19 @@
           time: 3000
         });
 
-        // For smooth animation to anchor links
-        $('a[href^="#').on('click', function(e) {
-          e.preventDefault();
-
-          var target = this.hash,
-          $target = $(target);
-
-          $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-          }, 1500, 'swing', function () {
-            window.location.hash.target;
-          })
-        })
+        // For animation to anchor links
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1500);
+              return false;
+            }
+          }
+        });
 
         // Initialize the mobile slicknav menu
         $('#menu').slicknav();
@@ -70,9 +70,17 @@
         $(this).addClass('side-animate');
       }, {offset: "50%"});
 
+      $('.animate-from-left').waypoint(function() {
+        $(this).addClass('appear');
+      }, {offset: "30%"});
+
       $('.animate-from-right').waypoint(function() {
         $(this).addClass('side-animate');
       }, {offset: "50%"});
+
+      $('.animate-from-right').waypoint(function() {
+        $(this).addClass('appear');
+      }, {offset: "30%"});
 
       // Using waypoints to change active nav class
       $('#story').waypoint(function() {

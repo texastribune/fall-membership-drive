@@ -120,7 +120,7 @@
   &:before
     display: block
     content: " "
-    height: 30px
+    height: 20px
     visibility: hidden
 
 h2
@@ -226,25 +226,42 @@ h2
   @include media($tablet)
     float: left
 
+.tribtalk-logo
+  max-width: 100%
+  @include media($tablet)
+    width: 25%
+
 .logo
   width: 85%
 
 // used to animate in Trib and Talk
 .animate-from-left
+  left: -300px
+  opacity: 0
   padding-bottom: 1em
   position: relative
-  left: -300px
   @include transition(left 1s ease-in-out)
+  @include transition(opacity 5s ease-in-out)
   &.side-animate
-    left: 130px
+    left: 18%
+    @include media($tablet)
+      left: 25%
+  &.appear
+    opacity: 1
 
 .animate-from-right
+  opacity: 0
   padding-bottom: 1em
   position: relative
   right: -300px
   @include transition(right 1s ease-in-out)
+  @include transition(opacity 5s ease-in-out)
   &.side-animate
-    right: 130px
+    right: 18%
+    @include media($tablet)
+      right: 25%
+  &.appear
+    opacity: 1
 
 .video
   padding: 1em
