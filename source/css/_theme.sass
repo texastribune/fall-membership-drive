@@ -42,10 +42,15 @@
           padding: 0 0.5em
 
 // sticky header
-.stuck
+#sticky-nav
+  height: 50px
+  overflow: hidden
   position: fixed
   top: 0
-  z-index: 1
+  visibility: visible
+  z-index: 5
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateZ(0)
 
 // Footer
 .footer
@@ -218,6 +223,8 @@ h2
 .newsletter-image
   height: 40px
   margin: 2em 0
+  @include media($tablet)
+    float: left
 
 .logo
   width: 85%

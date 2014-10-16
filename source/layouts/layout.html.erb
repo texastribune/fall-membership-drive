@@ -29,7 +29,6 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/shortcuts/sticky-elements/waypoints-sticky.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script>
@@ -110,10 +109,9 @@
         $(this).addClass('yellow-bg');
       }, {offset: "30%"});
 
-      // Make header sticky when reaches top of viewport
-      // Works with .stuck class in CSS, which fixes it to top
-      $('header').waypoint('sticky', {
-        offset: 0
+      // For sticky header
+      $('#unsticky-nav').waypoint(function() {
+        $('#sticky-nav').toggleClass('nav-hide');
       });
     </script>
   </body>
