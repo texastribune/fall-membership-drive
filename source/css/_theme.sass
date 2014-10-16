@@ -100,7 +100,7 @@
 
 // Styles for content types used in themed sections
 
-// Headers
+// Headers for sections
 .section-header
   padding: 0 9em
   @include media($tablet)
@@ -173,15 +173,6 @@ h2
   font-size: 1.6em
   font-weight: 400
 
-.quote-overlay
-  bottom: 100px
-  font-family: $pt-sans
-  font-size: 1em
-  left: 50%
-  margin: 0
-  position: relative
-  width: 150px
-
 
 //Font Awesome
 // intro arrow
@@ -231,11 +222,25 @@ h2
 .logo
   width: 85%
 
+// used to animate in Trib and Talk
+.animate-from-left
+  padding-bottom: 1em
+  position: relative
+  left: -300px
+  @include transition(left 1s ease-in-out)
+  &.side-animate
+    left: 130px
+
+.animate-from-right
+  padding-bottom: 1em
+  position: relative
+  right: -300px
+  @include transition(right 1s ease-in-out)
+  &.side-animate
+    right: 130px
+
 .video
   padding: 1em
-
-canvas
-  padding: 0 0.2em 0 0.2em
 
 
 // For stat counters
