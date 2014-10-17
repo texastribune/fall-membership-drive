@@ -1,5 +1,6 @@
 <!doctype html>
-<html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -20,6 +21,10 @@
     <%= stylesheet_link_tag "app" %>
     <script src="//use.typekit.net/zww2dfy.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
       <%= partial "header" %>
