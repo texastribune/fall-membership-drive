@@ -4,6 +4,8 @@ activate :livereload
 # Activate extension for Bourbon Sass mixins
 activate :bourbon
 
+activate :s3gzip, exts: %w(.js .css .html)
+
 # Sets CSS, JS & images directory names
 set :css_dir, 'css'
 set :js_dir, 'js'
