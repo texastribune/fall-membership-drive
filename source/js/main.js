@@ -36,6 +36,10 @@ $('.section-arrow-story').waypoint(function() {
   $(this).addClass('bg-size-appear');
 }, {offset: '30%'});
 
+$('.section-arrow-access').waypoint(function() {
+  $(this).addClass('bg-size-appear');
+}, {offset: '30%'});
+
 // animates in 'Trib' and 'Talk'
 $('.animate-from-left').waypoint(function() {
   $(this).addClass('side-animate');
