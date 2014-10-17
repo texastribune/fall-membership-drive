@@ -32,7 +32,7 @@ $(document).ready(function() {
 });
 
 // For arrow transition between sections
-$('.section-arrow').waypoint(function() {
+$('.section-arrow-story').waypoint(function() {
   $(this).addClass('bg-size-appear');
 }, {offset: '30%'});
 
