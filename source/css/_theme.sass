@@ -144,14 +144,17 @@ h2
 .black-bg
   background-color: $black-light
 
+.teal-bg
+  background-color: $teal-trib
+
+.teal-shadow
+  text-shadow: $teal-shadow 0.1em 0.1em 0px
+
 .text-on-white
   color: $navy-dark
 
 .text-on-yellow
   color: $black
-
-.teal-shadow
-  text-shadow: $teal-shadow 0.1em 0.1em 0px
 
 .yellow
   color: $yellow-trib
@@ -172,6 +175,7 @@ h2
   text-shadow: $white-shadow 0.1em 0.1em 0px
 
 // For arrow to transition between sections
+// TODO make mixin
 .section-arrow-white
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGRiIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
   background-position: top center
@@ -182,6 +186,14 @@ h2
 
 .section-arrow-yellow
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGQzIwMCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
+  background-position: top center
+  background-repeat: no-repeat
+  background-size: 100% 0%
+  -webkit-transition: background-size .5s
+  transition: background-size .5s
+
+.section-arrow-black
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iIzAwMCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
   background-position: top center
   background-repeat: no-repeat
   background-size: 100% 0%
