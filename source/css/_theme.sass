@@ -37,7 +37,6 @@
         text-decoration: none
         @include media($tablet)
           font-size: 0.8em
-          padding: 0 0.8em
         @include media($mobile)
           font-size: 0.7em
           padding: 0 0.5em
@@ -130,7 +129,7 @@ h2
   color: $black-middle
   font-family: $league-gothic
   font-size: 2em
-  font-weight: 600
+  font-weight: 200
   letter-spacing: 1px
   line-height: 1em
   margin: 0 0 0.4em 0
@@ -329,7 +328,7 @@ table
 
 .counter-wrapper
   padding: 0 0 1em 0
-  width: 150px
+  width: 50%
   hr
     border-style: none
     border-top: 2px solid $yellow-trib
@@ -338,9 +337,11 @@ table
 
 .counter
   font-family: $league-gothic
-  font-size: 3.5em
-  font-weight: 600
+  font-size: 2.8em
+  font-weight: 200
   letter-spacing: 0.03em
+  @include media($small-desktop)
+    font-size: 2.2em
 
 .counter-label
   font-family: $pt-sans
