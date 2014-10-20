@@ -3,7 +3,7 @@ $(document).ready(function() {
   // to use to resize landing so nav always visible on load
   // uncomment after top image updated, but adding now to be ready
   // $('.resize-wrapper').css('height', ($(window).innerHeight() - 50).toString());
-  
+
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
 
@@ -27,30 +27,27 @@ $(document).ready(function() {
     }
 });
 
+
   // Initialize the mobile slicknav menu
   $('#menu').slicknav();
 });
 
+
+// For sticky header
+$('#unsticky-nav').waypoint(function() {
+  $('#sticky-nav').toggleClass('nav-hide');
+}, {offset: 1});
+
+
 // For arrow transition between sections
-$('.section-arrow-story').waypoint(function() {
-  $(this).addClass('bg-size-appear');
-}, {offset: '30%'});
-
-$('.section-arrow-access').waypoint(function() {
-  $(this).addClass('bg-size-appear');
-}, {offset: '30%'});
-
-$('.section-arrow-accountability').waypoint(function() {
-  $(this).addClass('bg-size-appear');
-}, {offset: '30%'});
-
-$('.section-arrow-events').waypoint(function() {
+$('.section-arrow').waypoint(function() {
   $(this).addClass('bg-size-appear');
 }, {offset: '30%'});
 
 $('.section-arrow-community').waypoint(function() {
   $(this).addClass('bg-size-appear');
 }, {offset: '60%'});
+
 
 // animates in 'Trib' and 'Talk'
 $('.animate-from-left').waypoint(function() {
@@ -68,6 +65,7 @@ $('.animate-from-right').waypoint(function() {
 $('.animate-from-right').waypoint(function() {
   $(this).addClass('appear');
 }, {offset: "30%"});
+
 
 // Using waypoints to change active nav class
 $('#story').waypoint(function() {
@@ -103,8 +101,3 @@ $('#donate').waypoint(function() {
 $('#donate').waypoint(function() {
   $(this).addClass('yellow-bg');
 }, {offset: "30%"});
-
-// For sticky header
-$('#unsticky-nav').waypoint(function() {
-  $('#sticky-nav').toggleClass('nav-hide');
-});
