@@ -18,6 +18,8 @@
       display: inline-block
       height: 50px
       padding-top: 0.6em
+      @include media($tablet)
+        padding-top: 0.8em
       &.active
         background-color: $teal-trib
       &:hover
@@ -37,6 +39,7 @@
         text-decoration: none
         @include media($tablet)
           font-size: 0.8em
+          padding-top: 1em
         @include media($mobile)
           font-size: 0.7em
           padding: 0 0.5em
@@ -117,6 +120,7 @@
     font-size: 3.75em
     font-weight: 800
     line-height: 1.1em
+    margin-top: 0
     text-transform: uppercase
   &:before
     display: block

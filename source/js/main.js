@@ -3,6 +3,11 @@ $(document).ready(function() {
   // to use to resize landing so nav always visible on load
   // uncomment after top image updated, but adding now to be ready
   // $('.resize-wrapper').css('height', ($(window).innerHeight() - 50).toString());
+  if ($(window).innerHeight() < 535) {
+    $('#sticky-nav').toggle('nav-hide');
+    $('.resize-wrapper').css('padding-top', 50);
+    $('#unsticky-nav').hide();
+  }
 
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
