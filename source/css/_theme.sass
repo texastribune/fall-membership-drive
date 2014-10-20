@@ -53,9 +53,6 @@
   -webkit-backface-visibility: hidden
   -webkit-transform: translateZ(0)
 
-#unsticky-nav
-  position: absolute
-
 // Footer
 .footer
   background-color: $bg-head-foot
@@ -117,23 +114,25 @@
     padding: 0 1em
   h1
     color: $black
-    font-family: $league-gothic
-    font-size: 3em
-    font-weight: 300
+    font-family: $proxima-nova
+    font-size: 3.75em
+    font-weight: 800
     line-height: 1.1em
+    text-shadow: rgba(240, 240, 240, 0.3) 0.1em 0.1em 0px
     text-transform: uppercase
   &:before
     display: block
     content: " "
-    height: 20px
+    height: 40px
     visibility: hidden
 
+// Chunk headers
 h2
-  font-family: $pt-sans
-  font-size: 1.3em
-  font-weight: 700
+  font-family: $league-gothic
+  font-size: 2.25em
+  font-weight: 600
   letter-spacing: 1px
-  line-height: 1.2em
+  line-height: 1em
   margin: 0 0 0.4em 0
   text-transform: uppercase
 
@@ -144,6 +143,9 @@ h2
 
 .black-bg
   background-color: $black
+
+.navy-dark
+  color: $navy-dark
 
 .yellow
   color: $yellow-trib
@@ -184,11 +186,10 @@ h2
 
 // Quote sections
 .quote-section
-  font-family: $league-gothic
-  font-size: 1.4em
-  font-weight: 300
-  line-height: 1.4em
-  text-transform: uppercase
+  font-family: $pt-sans-narrow
+  font-size: 1.85em
+  font-weight: 900
+  line-height: 1.15em
 
 .quote-inner
   font-family: $league-gothic
@@ -209,13 +210,14 @@ h2
 
 // Text styles
 .text-container
-  padding: 1em
+  padding: 1em 0
 
 .text
   display: inline
   font-family: $pt-sans
-  font-size: 1em
-  font-weight: 200
+  font-size: 1.1em
+  font-weight: 300
+  line-height: 1.2em
   margin: 0
   padding: 0
   width: 100%
@@ -295,21 +297,21 @@ table
   width: 150px
   hr
     border-style: none
-    border-top: 3px solid $yellow-trib
+    border-top: 2px solid $yellow-trib
     color: $yellow-trib
     margin: 0 0 0.3em 0
 
 .counter
   font-family: $league-gothic
-  font-size: 2.5em
-  font-weight: 400
-  letter-spacing: .03em
-  line-height: 1.3em
+  font-size: 3.5em
+  font-weight: 600
+  letter-spacing: 0.03em
 
 .counter-label
   font-family: $pt-sans
   font-size: 1em
-  letter-spacing: .03em
+  font-weight: 400
+  letter-spacing: .13em
   margin: 0
   text-transform: uppercase
 
