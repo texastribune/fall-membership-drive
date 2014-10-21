@@ -47,7 +47,7 @@ $('#unsticky-nav').waypoint(function() {
 // For arrow transition between sections
 $('.section-arrow').waypoint(function() {
   $(this).addClass('bg-size-appear');
-}, {offset: '30%'});
+}, {offset: '40%'});
 
 $('.section-arrow-community').waypoint(function() {
   $(this).addClass('bg-size-appear');
