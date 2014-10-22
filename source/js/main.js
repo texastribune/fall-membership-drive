@@ -5,11 +5,11 @@ $(document).ready(function() {
   });
 
   // If nav won't fit, start w/it at top of screen
-  if ($(window).innerHeight() < 535) {
-    $('#sticky-nav').toggle('nav-hide');
-    $('.resize-wrapper').css('padding-top', 50);
-    $('#unsticky-nav').hide();
-  }
+  //if ($(window).innerHeight() < 535) {
+    //$('#sticky-nav').toggle('nav-hide');
+    //$('.resize-wrapper').css('padding-top', 50);
+    //$('#unsticky-nav').hide();
+  //}
 
   // Always have nav start at the bottom of the screen on load if it fits
   if ($(window).innerHeight() >= 535) {
