@@ -1,0 +1,72 @@
+// First, gather these styles here for each section
+// Then incorporate into general element styling as fit into patterns
+
+.our-story
+  .inner-wrap
+    @include media($mobile)
+      padding-top: 0
+    h2
+      @include media($mobile)
+        padding-top: 0
+
+.introducing
+  .inner-wrap, .text-container
+    @include media($mobile)
+      padding-top: 0
+
+.office-video
+  .inner-wrap, .video
+    @include media($mobile)
+      padding-top: 0
+      padding-bottom: 0
+
+.quote-one
+  .inner-wrap
+    @include media($mobile)
+      padding-top: 0
+
+.in-backyard
+  .image-container
+    @include media($mobile)
+      padding-top: 0
+
+.legislature
+  .medium
+    padding-top: 5.5em
+    @include media($mobile)
+      padding-top: 0
+
+.watchdog
+  h2
+    @include media($mobile)
+      padding-top: 0
+
+.trib-investigates
+  .image-container
+    padding-top: 4em
+    padding-bottom: 0
+    @include media($mobile)
+      padding-top: 0
+    .image
+      padding-left: 0.8em
+    .logo
+      @include media($mobile)
+        width: 100%
+
+.audience
+  .inner-wrap
+    padding-top: 0
+
+.newsletters
+  .image-container, .text-container
+    padding-top: 5.5em
+    @include media($mobile)
+      padding-top: 0
+
+.triblive
+  .image-container
+    @include media($mobile)
+      padding: 0
+  .image
+    @include media($mobile)
+      width: 100%

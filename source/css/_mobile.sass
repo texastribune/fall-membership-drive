@@ -4,9 +4,12 @@
 .image-container
   @include media($tablet)
     // find a better way instead of overriding these
+    clear: both !important
     float: none !important
     text-align: center !important
+    margin: 0 auto !important
     max-width: 50% !important
+    padding: 0
 
 // Hide for mobile
 .mobile-hide
@@ -31,4 +34,5 @@
     &:last-child
       a
         color: $yellow-trib
+
 
