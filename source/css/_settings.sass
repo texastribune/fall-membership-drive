@@ -53,3 +53,9 @@ $mobile: new-breakpoint(max-width 480px)
   -webkit-transition: background-size .5s
   padding: 2em 0
   transition: background-size .5s
+
+@mixin parallax-bg($img)
+  background-image: url($img)
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-size: cover
