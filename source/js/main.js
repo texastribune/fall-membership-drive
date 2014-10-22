@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-  $.stellar();
+  $.stellar({
+    responsive: true
+  });
 
   // If nav won't fit, start w/it at top of screen
   if ($(window).innerHeight() < 535) {
