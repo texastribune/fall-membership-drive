@@ -1,10 +1,8 @@
 $(document).ready(function() {
 
-  if ($(window).innerWidth() > 600) {
-    $.stellar({
-      responsive: true
-    });
-  }
+  $.stellar({
+    responsive: true
+  });
 
   // Initialize the mobile slicknav menu
   $('#menu').slicknav();
