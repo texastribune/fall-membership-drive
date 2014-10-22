@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
-  $.stellar({
-    responsive: true
-  });
+    $.stellar({
+      responsive: true
+    });
+
+  // Initialize the mobile slicknav menu
+  $('#menu').slicknav();
 
   // If nav won't fit, start w/it at top of screen
   //if ($(window).innerHeight() < 535) {
@@ -38,11 +41,7 @@ $(document).ready(function() {
         return false;
       }
     }
-});
-
-
-  // Initialize the mobile slicknav menu
-  $('#menu').slicknav();
+  });
 });
 
 
