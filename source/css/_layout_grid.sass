@@ -7,7 +7,7 @@
 .container
   +span-columns(12)
   background-color: $white
-  padding: 2em 0
+  padding: 0 0 1em 0
   @include media($tablet)
     padding: 1em 0
 
@@ -52,11 +52,15 @@
   +span-columns(12)
 
 // Provide element heights where appropriate
+// Mostly used for parallax windows
 .tall
   height: 800px
 
 .medium-tall
   height: 600px
+
+.medium-short
+  height: 500px
 
 .short
   height: 400px
@@ -75,6 +79,16 @@
 .clear
   clear: both
 
+.top-pad
+  padding-top: 1em
+
+.bottom-pad
+  padding-bottom: 1em
+
 .nav-hide
   display: none
   visibility: hidden
+
+.container
+  &.parallax-window
+    padding: 0

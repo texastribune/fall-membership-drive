@@ -137,6 +137,7 @@ h2
   letter-spacing: 1px
   line-height: 1em
   margin: 0 0 0.4em 0
+  padding-top: 1em
   text-transform: uppercase
 
 
@@ -183,36 +184,20 @@ h2
 // For arrow to transition between sections
 // TODO make mixin
 .section-arrow-white
+  @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGRiIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
-  background-position: top center
-  background-repeat: no-repeat
-  background-size: 100% 0%
-  -webkit-transition: background-size .5s
-  transition: background-size .5s
 
 .section-arrow-yellow
+  @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGQzIwMCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
-  background-position: top center
-  background-repeat: no-repeat
-  background-size: 100% 0%
-  -webkit-transition: background-size .5s
-  transition: background-size .5s
 
 .section-arrow-black
+  @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iIzAwMCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
-  background-position: top center
-  background-repeat: no-repeat
-  background-size: 100% 0%
-  -webkit-transition: background-size .5s
-  transition: background-size .5s
 
 .section-arrow-teal
+  @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iIzAwODk5MCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
-  background-position: top center
-  background-repeat: no-repeat
-  background-size: 100% 0%
-  -webkit-transition: background-size .5s
-  transition: background-size .5s
 
 .bg-size-appear
   background-size: 100% 100%
@@ -265,7 +250,7 @@ h2
 // Image styles
 .image-container
   max-width: 100%
-  padding: 1em
+  padding: 2em 0 1em 0
 
 .image
   max-width: 100%
@@ -294,10 +279,10 @@ h2
 
 // used to animate in Trib and Talk
 .animate-from-left
-  left: -300px
+  left: -200px
   padding-bottom: 1em
   position: relative
-  @include transition(left 5s ease-in-out)
+  @include transition(left 2s ease-in-out)
   &.side-animate
     left: 18%
     @include media($tablet)
@@ -306,8 +291,8 @@ h2
 .animate-from-right
   padding-bottom: 1em
   position: relative
-  right: -300px
-  @include transition(right 5s ease-in-out)
+  right: -200px
+  @include transition(right 2s ease-in-out)
   &.side-animate
     right: 18%
     @include media($tablet)

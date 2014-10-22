@@ -43,3 +43,13 @@ $desktop: new-breakpoint(min-width 851px 12)
 $small-desktop: new-breakpoint(max-width 970px)
 $tablet: new-breakpoint(max-width 850px)
 $mobile: new-breakpoint(max-width 480px)
+
+
+// Mixins
+@mixin section-arrow-slide
+  background-position: top center
+  background-repeat: no-repeat
+  background-size: 100% 0%
+  -webkit-transition: background-size .5s
+  padding: 2em 0
+  transition: background-size .5s
