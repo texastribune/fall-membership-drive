@@ -278,6 +278,7 @@ h2
 
 .tribtalk-logo
   max-width: 100%
+  padding-top: 2em
   @include media($tablet)
     width: 25%
 
@@ -286,24 +287,28 @@ h2
 
 // used to animate in Trib and Talk
 .animate-from-left
-  margin-left: -200px
-  padding-bottom: 1em
+  display: none
+  margin-left: -800px
   position: relative
-  @include transition(left 2s ease-in-out)
+  @include transition(left 3s ease-in-out)
   &.side-animate
-    left: 18%
+    display: block
+    left: 105%
     @include media($tablet)
-      left: 25%
+      display: block
+      left: 120%
 
 .animate-from-right
-  padding-bottom: 1em
+  display: none
   position: relative
-  margin-right: -200px
-  @include transition(right 2s ease-in-out)
+  margin-right: -800px !important
+  @include transition(right 3s ease-in-out)
   &.side-animate
-    right: 18%
-    @include media($tablet)
-      right: 25%
+    display: block
+    right: 105%
+    @include media($tablet) 
+      display: block
+      right: 125%
 
 .video
   padding: 1em 1em 1em 0
