@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $.stellar();
+
   // If nav won't fit, start w/it at top of screen
   if ($(window).innerHeight() < 535) {
     $('#sticky-nav').toggle('nav-hide');
@@ -16,7 +18,7 @@ $(document).ready(function() {
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
 
-  // For Texas Weekly counter
+  // For stats counters
   $('.counter').counterUp({
     delay: 50,
     time: 3000
