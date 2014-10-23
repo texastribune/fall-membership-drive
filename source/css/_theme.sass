@@ -191,8 +191,14 @@ h2
 // For arrow to transition between sections
 // TODO make mixin
 .section-arrow-white
-  @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGRiIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
+  background-position: top center
+  background-repeat: no-repeat
+  background-size: 100% 0%
+  padding: 2em 0
+  @include transition(background-size 0.5s ease-in-out)
+  &.bg-size-appear
+    background-size: 100% 100%
 
 .section-arrow-yellow
   @include section-arrow-slide
@@ -206,9 +212,6 @@ h2
   @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iIzAwODk5MCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
 
-.bg-size-appear
-  background-size: 100% 100%
-
 // For parallax
 .transparent
   background-color: transparent
@@ -221,6 +224,8 @@ h2
   font-weight: 900
   line-height: 1.15em
   text-align: center
+  @include media($mobile)
+    font-size: 1.5em
 
 .quote-inner
   font-family: $league-gothic
@@ -266,7 +271,7 @@ h2
   max-width: 100%
   @include media($tablet)
     float: none
-    width: 85%
+    width: 100%
 
 .image-wrap
   +span-columns(4)

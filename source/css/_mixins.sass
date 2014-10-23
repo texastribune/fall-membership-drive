@@ -3,11 +3,10 @@
   background-position: top center
   background-repeat: no-repeat
   background-size: 100% 0%
-  -webkit-background-size: 100% 0%
   padding: 2em 0
-  transition: background-size .5s
-  -webkit-transition: background-size .5s
-  -webkit-transform-style: preserve-3d
+  @include transition(background-size .5s ease-in-out)
+  &.bg-size-appear
+    background-size: 100% 100%
 
 // Parallax backgrounds
 @mixin parallax-bg($img)
