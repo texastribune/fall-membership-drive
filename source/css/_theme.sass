@@ -291,28 +291,30 @@ h2
 
 // used to animate in Trib and Talk
 .animate-from-left
-  display: none
-  margin-left: -800px
+  opacity: 0
+  left: 0
   position: relative
-  @include transition(left 3s ease-in-out)
+  @include transition(left 2s ease-in-out)
+  @include transition(opacity 3s ease-in-out)
+  &.appear
+    opacity: 1
   &.side-animate
-    display: block
-    left: 105%
+    left: 18%
     @include media($tablet)
-      display: block
-      left: 120%
+      left: 24%
 
 .animate-from-right
-  display: none
+  opacity: 0
   position: relative
-  margin-right: -800px !important
-  @include transition(right 3s ease-in-out)
+  right: 0
+  @include transition(right 2s ease-in-out)
+  @include transition(opacity 3s ease-in-out)
+  &.appear
+    opacity: 1
   &.side-animate
-    display: block
-    right: 105%
+    right: 18%
     @include media($tablet) 
-      display: block
-      right: 125%
+      right: 24%
 
 .video
   padding: 1em 1em 1em 0

@@ -61,20 +61,16 @@ $('.section-arrow-community').waypoint(function() {
 
 // animates in 'Trib' and 'Talk'
 $('.animate-from-left').waypoint(function() {
-  $(this).addClass('side-animate');
-}, {offset: "50%"});
-
-$('.animate-from-left').waypoint(function() {
   $(this).addClass('appear');
-}, {offset: "30%"});
-
-$('.animate-from-right').waypoint(function() {
   $(this).addClass('side-animate');
+  $(this).addClass('left');
 }, {offset: "50%"});
 
 $('.animate-from-right').waypoint(function() {
   $(this).addClass('appear');
-}, {offset: "30%"});
+  $(this).addClass('side-animate');
+  $(this).addClass('right');
+}, {offset: "50%"});
 
 
 // Using waypoints to change active nav class
