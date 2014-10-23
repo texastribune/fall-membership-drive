@@ -2,6 +2,7 @@
 // Then incorporate into general element styling as fit into patterns
 
 .our-story
+  @include parallax-bg('../img/FMD14-Capitol003.gif')
   .inner-wrap
     @include media($mobile)
       padding-top: 0
@@ -31,17 +32,23 @@
       padding-top: 0
 
 .legislature
-  .medium
-    padding-top: 5.5em
+  @include parallax-bg('../img/FMD14-Filibuster-bg002.jpg')
+  .stats
+    padding-top: 1.5em
     @include media($mobile)
       padding-top: 0
 
+.bidness
+  @include parallax-bg('../img/FMD14-Senate-FPO-bg.jpg')
+
 .watchdog
   h2
+    padding-top: 0.5em
     @include media($mobile)
       padding-top: 0
 
 .trib-investigates
+  @include parallax-bg('../img/tt-workers-davis-text500x400v4.jpg')
   .image-container
     padding-top: 4em
     padding-bottom: 0
@@ -57,16 +64,24 @@
   .inner-wrap
     padding-top: 0
 
+.members
+  @include parallax-bg('../img/FMD14-MemberFPO-bg.jpg')
+
 .newsletters
+  @include parallax-bg('../img/FMD14-newsletters-bg.png')
   .image-container, .text-container
     padding-top: 5.5em
     @include media($mobile)
       padding-top: 0
 
 .triblive
+  @include parallax-bg('../img/FMD14-TribliveFPO-bg002.jpg')
   .image-container
     @include media($mobile)
       padding: 0
   .image
     @include media($mobile)
       width: 100%
+
+.triblive-two
+  @include parallax-bg('../img/FMD14-TribliveFPO-bg002.jpg')

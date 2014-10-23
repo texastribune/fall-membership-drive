@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // This initializes the stellar bgs with responsive true
   $.stellar({
     responsive: true
   });
