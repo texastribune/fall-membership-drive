@@ -123,12 +123,29 @@
       padding: 0
 
 .triblive-two
-  @include parallax-bg('../img/FMD14-Triblive-speaker-bg-grid.jpg')
-  background-size: contain !important
+  background-image: url('../img/FMD14-Triblive-speaker-bg-grid.jpg')
+  background-attachment: fixed
   background-repeat: repeat
+  background-size: contain
+  @include media($mobile)
+    background-attachment: scroll
+    background-size: cover
+
+.stars
+  .inner-wrap
+    @include media($mobile)
+      padding-bottom: 0
 
 .statewide-events
   h2
+    @include media($mobile)
+      padding-top: 0
+  .image-container
+    @include media($mobile)
+      padding: 0
+
+.statewide-quote
+  .inner-wrap
     @include media($mobile)
       padding-top: 0
 
