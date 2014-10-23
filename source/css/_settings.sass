@@ -50,13 +50,18 @@ $mobile: new-breakpoint(max-width 480px)
   background-position: top center
   background-repeat: no-repeat
   background-size: 100% 0%
+  -webkit-background-size: 100% 0%
   -webkit-transition: background-size .5s
   padding: 2em 0
   transition: background-size .5s
+  -webkit-transform-style: preserve-3d
 
 @mixin parallax-bg($img)
   background-image: url($img)
   background-attachment: fixed
   background-repeat: no-repeat
   background-size: cover
+  -webkit-background-size: cover
   width: 100%
+  @include media($mobile)
+    background-attachment: scroll
