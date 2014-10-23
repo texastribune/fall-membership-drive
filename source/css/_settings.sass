@@ -21,21 +21,20 @@ $white-off: #f0f0f0
 
 
 // Typography
+
 $text-header: $white
 $teal-shadow: #00676c
 $white-shadow: #f0f0f0
 $yellow-shadow: #f0af2d
 
+$league-gothic: 'league-gothic', sans-serif
+$proxima-nova: proxima-nova-sc-osf, sans-serif
+$pt-sans: pt-sans, sans-serif
+$pt-sans-narrow: pt-sans-narrow, sans-serif
+
 
 // Section backgrounds
 $bg-head-foot: $navy-trib
-
-
-// Typography
-$league-gothic: 'league-gothic', sans-serif
-$proxima-nova: proxima-nova-sc-osf
-$pt-sans: pt-sans, sans-serif
-$pt-sans-narrow: pt-sans-narrow, sans-serif
 
 
 // Media query breakpoints
@@ -43,23 +42,3 @@ $desktop: new-breakpoint(min-width 851px 12)
 $small-desktop: new-breakpoint(max-width 970px)
 $tablet: new-breakpoint(max-width 850px)
 $mobile: new-breakpoint(max-width 480px)
-
-
-// Mixins
-@mixin section-arrow-slide
-  background-position: top center
-  background-repeat: no-repeat
-  background-size: 100% 0%
-  -webkit-background-size: 100% 0%
-  -webkit-transition: background-size .5s
-  padding: 2em 0
-  transition: background-size .5s
-  -webkit-transform-style: preserve-3d
-
-@mixin parallax-bg($img)
-  background-image: url($img)
-  background-attachment: fixed
-  background-repeat: no-repeat
-  background-size: cover
-  -webkit-background-size: cover
-  width: 100%

@@ -1,16 +1,19 @@
 $(document).ready(function() {
 
   // This initializes the stellar bgs with responsive true
-  $.stellar({
-    responsive: true
-  });
+  // Don't initialize on ios
+  if (!navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    $.stellar({
+      responsive: true
+    });
+  }
 
   // Initialize the mobile slicknav menu
   $('#menu').slicknav();
 
 
   // Always have nav start at the bottom of the screen on load if it fits
-  if ($(window).innerHeight() >= 535) {
+  if ($(window).innerHeight() >= 540) {
     $('#unsticky-nav').css('bottom', 0);
     $('.resize-wrapper').css('height', $(window).innerHeight() - 50);
   }

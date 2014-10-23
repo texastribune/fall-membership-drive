@@ -1,6 +1,15 @@
 // First, gather these styles here for each section
 // Then incorporate into general element styling as fit into patterns
 
+.anniversary-logo
+  max-width: 1000px
+  padding: 3em 0 2.5em 0
+  position: relative
+  width: 65%
+  @include media($mobile)
+    padding: 2em 0 1em 0
+    width: 85%
+
 .our-story
   @include parallax-bg('../img/FMD14-Capitol003.gif')
   .inner-wrap
@@ -37,9 +46,24 @@
     padding-top: 1.5em
     @include media($mobile)
       padding-top: 0
+  .inner-wrap
+    @include media($mobile)
+      padding-top: 0
+
+.livestream
+  .image-container
+    padding-top: 3em
+    @include media($mobile)
+      padding: 0
+    .image
+      width: 85%
 
 .bidness
   @include parallax-bg('../img/FMD14-Senate-FPO-bg.jpg')
+  .text-container
+    padding-top: 2.5em
+    @include media($mobile)
+      padding-top: 0
 
 .watchdog
   h2
@@ -66,6 +90,10 @@
 
 .members
   @include parallax-bg('../img/FMD14-MemberFPO-bg.jpg')
+  .text-container
+    padding-top: 3em
+    @include media($mobile)
+      padding-top: 0
 
 .newsletters
   @include parallax-bg('../img/FMD14-newsletters-bg.png')
@@ -85,3 +113,9 @@
 
 .triblive-two
   @include parallax-bg('../img/FMD14-TribliveFPO-bg002.jpg')
+
+.statewide-events
+  h2
+    @include media($mobile)
+      padding-top: 0
+
