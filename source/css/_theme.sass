@@ -196,14 +196,8 @@ h2
 // For arrow to transition between sections
 // TODO make mixin
 .section-arrow-white
+  @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGRiIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
-  background-position: top center
-  background-repeat: no-repeat
-  background-size: 100% 0%
-  padding: 2em 0
-  @include transition(background-size 0.5s ease-in-out)
-  &.bg-size-appear
-    background-size: 100% 100%
 
 .section-arrow-yellow
   @include section-arrow-slide
