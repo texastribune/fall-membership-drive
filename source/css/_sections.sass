@@ -4,9 +4,9 @@
 
 .anniversary-logo
   max-width: 1000px
-  padding: 3em 0 2.5em 0
+  padding: 2em 0 1em 0
   position: relative
-  width: 65%
+  width: 75%
   @include media($mobile)
     padding: 2em 0 1em 0
     width: 85%
@@ -61,7 +61,7 @@
       width: 85%
 
 .bidness
-  @include parallax-bg('../img/FMD14-Senate-FPO-bg.jpg')
+  @include parallax-bg('../img/FMD14-bidness-senate-bg.jpg')
   .text-container
     padding-top: 2.5em
     @include media($mobile)
@@ -74,7 +74,7 @@
       padding-top: 0
 
 .trib-investigates
-  @include parallax-bg('../img/Workers-bg-CrystalDavis-005.jpg')
+  @include parallax-bg('../img/Workers-bg-CrystalDavis-006.jpg')
   .text-container
     &.left
       padding-top: 18em
@@ -96,11 +96,17 @@
     padding-top: 0
 
 .members
-  @include parallax-bg('../img/FMD14-MemberFPO-bg.jpg')
+  @include parallax-bg('../img/FMD14-Member-bg001.jpg')
+  @include media($mobile)
+    @include parallax-bg('../img/FMD14-Member-bg002.jpg')
   .text-container
     padding-top: 3em
     @include media($mobile)
       padding-top: 0
+
+.tribtalk
+  .image-container, .text-container
+    padding-top: 0
 
 .newsletters
   @include parallax-bg('../img/FMD14-newsletters-bg.png')
@@ -121,8 +127,7 @@
 .triblive-middle
   padding: 0
   .image-container
-    &.right
-      padding: 0
+    padding: 0
 
 .triblive-two
   background-image: url('../img/FMD14-Triblive-speaker-bg-grid.jpg')

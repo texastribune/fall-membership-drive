@@ -13,10 +13,10 @@ $(document).ready(function() {
 
 
   // Always have nav start at the bottom of the screen on load if it fits
-  if ($(window).innerHeight() >= 625) {
-    $('#unsticky-nav').css('bottom', 0);
-    $('.resize-wrapper').css('height', $(window).innerHeight() - 50);
-  }
+  // if ($(window).innerHeight() >= 625) {
+  //   $('#unsticky-nav').css('bottom', 0);
+  //   $('.resize-wrapper').css('height', $(window).innerHeight() - 50);
+  // }
 
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
