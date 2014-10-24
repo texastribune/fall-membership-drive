@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
   // Always have nav start at the bottom of the screen on load if it fits
-  if ($(window).innerHeight() >= 540) {
+  if ($(window).innerHeight() >= 625) {
     $('#unsticky-nav').css('bottom', 0);
     $('.resize-wrapper').css('height', $(window).innerHeight() - 50);
   }
@@ -45,7 +45,8 @@ $(document).ready(function() {
 
 // For sticky header
 $('#unsticky-nav').waypoint(function() {
-  $('#sticky-nav').toggleClass('nav-hide');
+  $('#sticky-nav').toggleClass('hide');
+  $('.cta-button-fixed').toggleClass('hide');
 }, {offset: 1});
 
 

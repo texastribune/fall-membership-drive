@@ -60,6 +60,9 @@
   -webkit-backface-visibility: hidden
   -webkit-transform: translateZ(0)
 
+#unsticky-nav
+  position: relative
+
 // Footer
 .footer
   background-color: $bg-head-foot
@@ -169,6 +172,9 @@ h2
 .teal-shadow
   text-shadow: $teal-shadow 0.1em 0.1em 0px
 
+.teal-shadow-color
+  color: $teal-shadow
+
 .text-on-white
   color: $navy-dark
 
@@ -183,6 +189,9 @@ h2
 
 .yellow-shadow
   text-shadow: $yellow-shadow 0.1em 0.1em 0px
+
+.yellow-shadow-color
+  color: $yellow-shadow
 
 .white
   color: $white
@@ -226,6 +235,16 @@ h2
   @include media($mobile)
     font-size: 1.5em
 
+// TODO: make quote mixin to use here
+.quote-overlay
+  font-family: $pt-sans-narrow
+  font-size: 1.85em
+  font-weight: 900
+  line-height: 1.15em
+  text-align: right
+  @include media($mobile)
+    font-size: 1.5em
+
 .quote-inner
   font-family: $league-gothic
   font-size: 1.6em
@@ -239,7 +258,6 @@ h2
 
 // Star dividers
 .fa-star
-  color: $teal-shadow
   font-size: 1.2em
   padding: 0 2em
   @include media($mobile)
@@ -355,3 +373,33 @@ table
   margin: 0
   text-transform: uppercase
 
+.cta-link
+  text-decoration: none
+
+.cta-button
+  background-color: $yellow-trib
+  border-radius: 5px
+  color: $black
+  font-family: $league-gothic
+  font-size: 2em
+  height: 60px
+  line-height: 60px
+  margin: 0 auto
+  right: 20px
+  text-align: center
+  text-transform: uppercase
+  vertical-align: center
+  width: 250px
+  &:hover
+    background-color: $teal-trib
+    color: $white
+
+.cta-button-fixed
+  @extend .cta-button
+  border: 2px solid $yellow-shadow
+  bottom: 20px
+  position: fixed
+  width: 150px
+  z-index: 5
+  p
+    margin: 0
