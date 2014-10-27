@@ -111,36 +111,6 @@
 
 // Styles for content types used in themed sections
 
-// Bottom-of-site CTA
-.cta-bottom
-  .join
-    @include media($mobile)
-      font-size: 2.5em
-    font-family: $proxima-nova
-    font-size: 3.5em
-    font-weight: 800
-    line-height: 1.1em
-    text-transform: uppercase
-    a
-      color: $teal-trib
-      &:hover
-        color: $black
-  .become
-    font-family: $pt-sans-narrow
-    font-size: 2em
-    font-weight: 800
-    letter-spacing: 0
-    line-height: 0.6em
-
-// Join links throughout copy
-.join-links
-  color: $teal-trib
-  font-family: $pt-sans
-  font-size: 1.1em
-  font-weight: 300
-  line-height: 1.2em
-  text-decoration: none
-
 
 // Headers for sections
 .section-header
@@ -233,7 +203,6 @@ h2
   background-color: transparent
 
 // For arrow to transition between sections
-// TODO make mixin
 .section-arrow-white
   @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iI0ZGRiIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
@@ -251,7 +220,7 @@ h2
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iIzAwODk5MCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
 
 
-// Quote sections
+// Quote styles
 .quote-section
   @include media($mobile)
     font-size: 1.5em
@@ -368,6 +337,7 @@ table
   text-transform: uppercase
 
 
+
 // For CTA buttons & links
 .cta-link
   color: $black
@@ -376,6 +346,7 @@ table
     background-color: $teal-trib
     color: $white
 
+// Landing button
 .cta-button
   background-color: $yellow-trib
   border-radius: 5px
@@ -394,6 +365,7 @@ table
     background-color: $teal-trib
     color: $white
 
+// Fixed button in right rail
 .cta-button-fixed
   @extend .cta-button
   border: 2px solid $white
@@ -403,3 +375,33 @@ table
   z-index: 5
   p
     margin: 0
+
+// Bottom-of-site CTA
+.cta-bottom
+  .join
+    @include media($mobile)
+      font-size: 2.5em
+    font-family: $proxima-nova
+    font-size: 3.5em
+    font-weight: 800
+    line-height: 1.1em
+    text-transform: uppercase
+    a
+      color: $teal-trib
+      &:hover
+        color: $black
+  .become
+    font-family: $pt-sans-narrow
+    font-size: 2em
+    font-weight: 800
+    letter-spacing: 0
+    line-height: 0.6em
+
+// Join links throughout copy
+.join-links
+  color: $teal-trib
+  font-family: $pt-sans
+  font-size: 1.1em
+  font-weight: 300
+  line-height: 1.2em
+  text-decoration: none

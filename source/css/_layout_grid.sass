@@ -3,6 +3,7 @@
   +outer-container
   max-width: 100%
 
+
 //Apply class to start a new container for themed sections
 .container
   +span-columns(12)
@@ -13,26 +14,28 @@
 
 .top-container
   @include parallax-bg('../img/FMD14-Capitol-sky002.gif')
-  float: none
-  padding: 0
   @include media($mobile)
     height: 500px
     margin-top: 47px
+  float: none
+  padding: 0
+
 
 // Inner wrap, mostly used inside .container
 .inner-wrap
+  @include media($tablet)
+    padding: 1em
   height: 100%
   margin: 0 auto
   max-width: 1000px
   padding: 0 7em
   position: relative
-  @include media($tablet)
-    padding: 1em
 
 .inner-wrap-no-pad
   @extend .inner-wrap
   @include media($mobile)
     padding-top: 0
+
 
 // Determine columns spanned by element
 .small
@@ -58,6 +61,7 @@
 .large
   +span-columns(12)
 
+
 // Provide element heights where appropriate
 // Mostly used for parallax windows
 .tall
@@ -72,6 +76,7 @@
 .short
   height: 400px
 
+
 // Floating
 .right
   float: right !important
@@ -82,7 +87,8 @@
 .no-float
   float: none
 
-// Centering and clearing
+
+// Centering, clearing & margins
 .center
   text-align: center
 
@@ -92,6 +98,8 @@
 .no-margin
   margin: 0
 
+
+// Common padding amounts
 .no-pad
   padding: 0
 
@@ -101,10 +109,12 @@
 .bottom-pad
   padding-bottom: 1em
 
-.hide
-  display: none
-  visibility: hidden
-
 .container
   &.parallax-window
     padding: 0
+
+
+// Display
+.hide
+  display: none
+  visibility: hidden
