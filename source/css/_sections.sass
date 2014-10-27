@@ -3,12 +3,12 @@
 // TODO refactor these according to patterns
 
 .anniversary-logo
+  @include media($mobile)
+    width: 85%
   max-width: 1000px
   padding: 2em 0 1em 0
   position: relative
   width: 75%
-  @include media($mobile)
-    width: 85%
 
 .our-story
   @include parallax-bg('../img/FMD14-Capitol003.gif')
@@ -30,52 +30,52 @@
 
 .in-backyard
   .image-container
-    padding-top: 1em
     @include media($mobile)
       padding-top: 0
+    padding-top: 1em
   .text-container
     padding-top: 0
 
 .legislature
   @include parallax-bg('../img/FMD14-Filibuster-bg002.jpg')
   .stats
-    padding-top: 1.5em
     @include media($mobile)
       padding-top: 0
+    padding-top: 1.5em
 
 .livestream
   .image-container
-    padding-top: 3em
     @include media($mobile)
       padding: 0
+    padding-top: 3em
     .image
       width: 85%
 
 .bidness
   @include parallax-bg('../img/FMD14-bidness-senate-bg.jpg')
   .text-container
-    padding-top: 2.5em
     @include media($mobile)
       padding-top: 0
+    padding-top: 2.5em
 
 .watchdog
   h2
-    padding-top: 0.5em
     @include media($mobile)
       padding-top: 0
+    padding-top: 0.5em
 
 .trib-investigates
   @include parallax-bg('../img/Workers-bg-CrystalDavis-006.jpg')
   .text-container
     &.left
-      padding-top: 18em
       @include media($tablet)
         padding-top: 0
+      padding-top: 18em
   .image-container
-    padding-top: 4em
-    padding-bottom: 0
     @include media($mobile)
       padding-top: 0
+    padding-top: 4em
+    padding-bottom: 0
     .image
       padding-left: 0.8em
     .logo
@@ -87,9 +87,9 @@
   @include media($mobile)
     @include parallax-bg('../img/FMD14-Member-bg002.jpg')
   .text-container
-    padding-top: 3em
     @include media($mobile)
       padding-top: 0
+    padding-top: 3em
 
 .tribtalk
   .image-container, .text-container
@@ -129,14 +129,14 @@
     margin-right: 0
 
 .triblive-two
-  background-image: url('../img/FMD14-Triblive-speaker-bg-grid.jpg')
-  background-attachment: fixed
-  background-repeat: repeat
-  background-size: contain
   @include media($mobile)
     background-attachment: scroll
     background-image: url('../img/FMD14-Triblive-bg-6x6grid.jpg')
     background-size: cover
+  background-image: url('../img/FMD14-Triblive-speaker-bg-grid.jpg')
+  background-attachment: fixed
+  background-repeat: repeat
+  background-size: contain
 
 .stars
   .inner-wrap
@@ -148,9 +148,9 @@
     @include media($mobile)
       padding-top: 0
   .image-container
-    padding-top: 0
     @include media($mobile)
       padding: 0
+    padding-top: 0
 
 #donate
   height: 100%

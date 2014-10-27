@@ -27,6 +27,12 @@
         a
           color: $yellow-trib
       a
+        @include media($tablet)
+          font-size: 0.8em
+          padding-top: 1em
+        @include media($mobile)
+          font-size: 0.7em
+          padding: 0 0.5em
         color: $text-header
         font-family: $pt-sans-narrow
         font-size: 1.3em
@@ -40,12 +46,6 @@
           vertical-align: middle
           img
             height: 1em
-        @include media($tablet)
-          font-size: 0.8em
-          padding-top: 1em
-        @include media($mobile)
-          font-size: 0.7em
-          padding: 0 0.5em
 
 // sticky header
 #sticky-nav
@@ -60,6 +60,9 @@
 
 // Footer
 .footer
+  @include media($desktop)
+    padding: 0
+    text-align: none
   background-color: $bg-head-foot
   clear: both
   color: $white
@@ -68,22 +71,19 @@
   position: absolute
   text-align: center
   width: 100%
-  @include media($desktop)
-    padding: 0
-    text-align: none
   nav
-    ul
-      list-style: none
-      padding: 0
-    font-size: .875em
     @include media($desktop)
       float: left
       font-size: .75em
       margin: 0 0 1em
+    ul
+      list-style: none
+      padding: 0
+    font-size: .875em
   .first-nav
-    color: $yellow-trib
     @include media($desktop)
       float: left
+    color: $yellow-trib
     li
       padding: 0
     a
@@ -96,7 +96,6 @@
       color: $white
       text-decoration: none
   li
-    margin: .75em 0
     @include media($desktop)
       border-left: 1px solid $yellow-trib
       display: inline
@@ -106,6 +105,7 @@
       &:first-child
         border: 0
         padding-left: 0
+    margin: .75em 0
 
 
 
@@ -114,13 +114,13 @@
 // Bottom-of-site CTA
 .cta-bottom
   .join
+    @include media($mobile)
+      font-size: 2.5em
     font-family: $proxima-nova
     font-size: 3.5em
     font-weight: 800
     line-height: 1.1em
     text-transform: uppercase
-    @include media($mobile)
-      font-size: 2.5em
     a
       color: $teal-trib
       &:hover
@@ -144,11 +144,15 @@
 
 // Headers for sections
 .section-header
-  background: transparent
-  padding: 0 9em
   @include media($tablet)
     padding: 0 1em
+  background: transparent
+  padding: 0 9em
   h1
+    @include media($mobile)
+      font-size: 2.2em
+      margin: 0
+      padding-bottom: 0.5em
     color: $black-middle
     font-family: $proxima-nova
     font-size: 3.75em
@@ -156,10 +160,6 @@
     line-height: 1.1em
     margin-top: 0
     text-transform: uppercase
-    @include media($mobile)
-      font-size: 2.2em
-      margin: 0
-      padding-bottom: 0.5em
   &:before
     display: block
     content: " "
@@ -228,6 +228,10 @@ h2
 .white-shadow
   text-shadow: $white-shadow 0.1em 0.1em 0px
 
+// For parallax
+.transparent
+  background-color: transparent
+
 // For arrow to transition between sections
 // TODO make mixin
 .section-arrow-white
@@ -246,30 +250,20 @@ h2
   @include section-arrow-slide
   background-image: url(data:image/svg+xml;base64,PHN2ZyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9Ijc2LjU5OCI+PHBvbHlnb24gZmlsbD0iIzAwODk5MCIgcG9pbnRzPSIwLDAgOTYwLjAzNiw3Ni41OTggMTkyMCwwIi8+PC9zdmc+Cg==)
 
-// For parallax
-.transparent
-  background-color: transparent
-
 
 // Quote sections
 .quote-section
+  @include media($mobile)
+    font-size: 1.5em
   font-family: $pt-sans-narrow
   font-size: 1.85em
   font-weight: 900
   line-height: 1.15em
   text-align: center
-  @include media($mobile)
-    font-size: 1.5em
 
-// TODO: make quote mixin to use here
 .quote-overlay
-  font-family: $pt-sans-narrow
-  font-size: 1.85em
-  font-weight: 900
-  line-height: 1.15em
+  @extend .quote-section
   text-align: right
-  @include media($mobile)
-    font-size: 1.5em
 
 .quote-inner
   font-family: $league-gothic
@@ -284,10 +278,10 @@ h2
 
 // Star dividers
 .fa-star
-  font-size: 1.2em
-  padding: 0 2em
   @include media($mobile)
     padding: 0 1em
+  font-size: 1.2em
+  padding: 0 2em
 
 
 // Text styles
@@ -311,32 +305,29 @@ h2
   padding: 2em 0 1em 0
 
 .image
-  max-width: 100%
-  @include media($mobile)
+  @include media($tablet)
     float: none
     width: 75%
   @include media($mobile)
-    float: none
     width: 100%
+  max-width: 100%
 
 .image-wrap
-  +span-columns(4)
-  padding: 3em 0 0 1em
   @include media($mobile)
     +span-columns(6)
+  +span-columns(4)
+  padding: 3em 0 0 1em
 
 .newsletter-image
-  height: 40px
-  margin: 2em 0
   @include media($tablet)
     float: left
+  height: 40px
+  margin: 2em 0
 
 .tribtalk-logo
   max-width: 100%
   padding-top: 2em
   width: 25%
-  @include media($tablet)
-    width: 25%
 
 .logo
   width: 85%
@@ -361,12 +352,12 @@ table
     margin: 0 0 0.3em 0
 
 .counter
+  @include media($small-desktop)
+    font-size: 2.2em
   font-family: $league-gothic
   font-size: 2.8em
   font-weight: 200
   letter-spacing: 0.03em
-  @include media($small-desktop)
-    font-size: 2.2em
 
 .counter-label
   font-family: $pt-sans
@@ -376,6 +367,8 @@ table
   margin: 0
   text-transform: uppercase
 
+
+// For CTA buttons & links
 .cta-link
   color: $black
   text-decoration: none
