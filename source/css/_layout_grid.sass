@@ -29,6 +29,11 @@
   @include media($tablet)
     padding: 1em
 
+.inner-wrap-no-pad
+  @extend .inner-wrap
+  @include media($mobile)
+    padding-top: 0
+
 // Determine columns spanned by element
 .small
   +span-columns(4)
@@ -74,12 +79,18 @@
 .left
   float: left
 
+.no-float
+  float: none
+
 // Centering and clearing
 .center
   text-align: center
 
 .clear
   clear: both
+
+.no-margin
+  margin: 0
 
 .top-pad
   padding-top: 1em

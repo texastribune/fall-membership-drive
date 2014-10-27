@@ -8,20 +8,17 @@
   position: relative
   width: 75%
   @include media($mobile)
-    padding: 2em 0 1em 0
     width: 85%
 
 .our-story
   @include parallax-bg('../img/FMD14-Capitol003.gif')
   .inner-wrap
-    @include media($mobile)
-      padding-top: 0
     h2
       @include media($mobile)
         padding-top: 0
 
 .introducing
-  .inner-wrap, .text-container
+  .text-container
     @include media($mobile)
       padding-top: 0
 
@@ -31,24 +28,18 @@
       padding-top: 0
       padding-bottom: 0
 
-.quote-one
-  .inner-wrap
-    @include media($mobile)
-      padding-top: 0
-
 .in-backyard
   .image-container
     padding-top: 1em
     @include media($mobile)
       padding-top: 0
+  .text-container
+    padding-top: 0
 
 .legislature
   @include parallax-bg('../img/FMD14-Filibuster-bg002.jpg')
   .stats
     padding-top: 1.5em
-    @include media($mobile)
-      padding-top: 0
-  .inner-wrap
     @include media($mobile)
       padding-top: 0
 
@@ -90,10 +81,6 @@
     .logo
       @include media($mobile)
         width: 100%
-
-.audience
-  .inner-wrap
-    padding-top: 0
 
 .members
   @include parallax-bg('../img/FMD14-Member-bg002.jpg')
@@ -158,9 +145,3 @@
   .image-container
     @include media($mobile)
       padding: 0
-
-.statewide-quote
-  .inner-wrap
-    @include media($mobile)
-      padding-top: 0
-
