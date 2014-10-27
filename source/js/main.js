@@ -60,20 +60,6 @@ $('.section-arrow-community').waypoint(function() {
 }, {offset: '60%'});
 
 
-// animates in 'Trib' and 'Talk'
-$('.animate-from-left').waypoint(function() {
-  $(this).addClass('appear');
-  $(this).addClass('side-animate');
-  $(this).addClass('left');
-}, {offset: "50%"});
-
-$('.animate-from-right').waypoint(function() {
-  $(this).addClass('appear');
-  $(this).addClass('side-animate');
-  $(this).addClass('right');
-}, {offset: "50%"});
-
-
 // Using waypoints to change active nav class
 $('#story').waypoint(function() {
   $('.header li').removeClass('active');

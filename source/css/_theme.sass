@@ -339,33 +339,6 @@ h2
 .logo
   width: 85%
 
-// used to animate in Trib and Talk
-.animate-from-left
-  opacity: 0
-  left: 0
-  position: relative
-  @include transition(left 2s ease-in-out)
-  @include transition(opacity 3s ease-in-out)
-  &.appear
-    opacity: 1
-  &.side-animate
-    left: 18%
-    @include media($tablet)
-      left: 24%
-
-.animate-from-right
-  opacity: 0
-  position: relative
-  right: 0
-  @include transition(right 2s ease-in-out)
-  @include transition(opacity 3s ease-in-out)
-  &.appear
-    opacity: 1
-  &.side-animate
-    right: 18%
-    @include media($tablet) 
-      right: 24%
-
 .video
   padding: 1em 1em 1em 0
 
@@ -406,12 +379,12 @@ table
   text-decoration: none
   &:hover
     background-color: $teal-trib
-    color: $white !important
+    color: $white
 
 .cta-button
   background-color: $yellow-trib
   border-radius: 5px
-  color: $black !important
+  color: $black
   font-family: $league-gothic
   font-size: 2em
   height: 55px
@@ -424,7 +397,7 @@ table
   width: 250px
   &:hover
     background-color: $teal-trib
-    color: $white !important
+    color: $white
 
 .cta-button-fixed
   @extend .cta-button
