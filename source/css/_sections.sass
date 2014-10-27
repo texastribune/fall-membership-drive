@@ -111,18 +111,19 @@
 .newsletters
   @include parallax-bg('../img/FMD14-newsletters-bg.png')
   .image-container, .text-container
-    padding-top: 6em
     @include media($mobile)
       padding-top: 0
+    img
+      width: 50%
 
 .triblive
   @include parallax-bg('../img/FMD14-Triblive-speaker-bg-grid.jpg')
   .image-container
-    @include media($mobile)
+    @include media($tablet)
       padding: 0
-  .image
-    @include media($mobile)
-      width: 100%
+    .image
+      @include media($mobile)
+        width: 100%
 
 .triblive-middle
   margin: 0
