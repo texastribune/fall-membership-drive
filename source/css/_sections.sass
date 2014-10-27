@@ -122,6 +122,11 @@
   padding: 0
   .image-container
     padding: 1em 0
+    &.left
+      margin-right: 0
+      padding-left: 0
+  .text-container
+    margin-right: 0
 
 .triblive-two
   background-image: url('../img/FMD14-Triblive-speaker-bg-grid.jpg')
@@ -143,5 +148,9 @@
     @include media($mobile)
       padding-top: 0
   .image-container
+    padding-top: 0
     @include media($mobile)
       padding: 0
+
+#donate
+  height: 100%
