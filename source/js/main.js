@@ -17,6 +17,9 @@ $(document).ready(function() {
   //   $('.resize-wrapper').css('height', $(window).innerHeight() - 50);
   // }
 
+  // To be used by colorbox
+  window.colorbox_count = 0;
+
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
 
@@ -61,7 +64,15 @@ $('.section-arrow-community').waypoint(function() {
 
 // For colorbox popping up for joining/donating
 $('#transparency').waypoint(function() {
-  $.colorbox({html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>"});
+    // check that colorbox hasn't opened before
+    if (window.colorbox_count === 0) {
+      $.colorbox(
+      {html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>",
+      onClosed: function() {
+        window.colorbox_count += 1;
+        }
+      });
+    }
 }, {offset: 1});
 
 
