@@ -40,6 +40,9 @@
     padding-top: 1em
   .text-container
     padding-top: 0
+  h2
+    @include media($tablet)
+      padding-top: 0
 
 .legislature
   @include parallax-bg('../img/FMD14-Filibuster-bg002.jpg')
@@ -63,6 +66,8 @@
   .text-container
     @include media($mobile)
       padding-top: 0
+    @include media($tablet)
+      padding-top: 3.5em
     padding-top: 2.5em
 
 .watchdog
@@ -105,6 +110,8 @@
   .text-container
     @include media($mobile)
       padding-top: 0
+    @include media($tablet)
+      padding-top: 4em
     padding-top: 3em
 
 .tribtalk
@@ -157,6 +164,11 @@
 .festival-stars
   padding-top: 1em
 
+.festival-quote
+  .inner-wrap
+    @include media($tablet)
+      padding-top: 0
+
 .stars
   .inner-wrap
     @include media($mobile)
@@ -165,10 +177,10 @@
 .statewide-events
   padding: 0
   h2
-    @include media($mobile)
+    @include media($tablet)
       padding-top: 0
   .image-container
-    @include media($mobile)
+    @include media($tablet)
       padding: 0
     padding-top: 0
 
