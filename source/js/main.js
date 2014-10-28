@@ -60,6 +60,12 @@ $('.section-arrow-community').waypoint(function() {
 }, {offset: '60%'});
 
 
+// For colorbox popping up for joining/donating
+$('#transparency').waypoint(function() {
+  $.colorbox({html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>"});
+}, {offset: 1});
+
+
 // Using waypoints to change active nav class
 $('#story').waypoint(function() {
   $('.header li').removeClass('active');

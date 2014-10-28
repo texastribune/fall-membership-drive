@@ -25,5 +25,5 @@ activate :s3_sync do |config|
   config.aws_access_key_id = ENV['AWS_ACCESS_KEY']
   config.aws_secret_access_key = ENV['AWS_ACCESS_SECRET']
   # Set this to true to deploy to s3
-  config.after_build = true
+  config.after_build = false
 end
