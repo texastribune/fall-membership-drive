@@ -11,7 +11,6 @@ $(document).ready(function() {
   // Initialize the mobile slicknav menu
   $('#menu').slicknav();
 
-
   // Always have nav start at the bottom of the screen on load if it fits
   // if ($(window).innerHeight() >= 625) {
   //   $('#unsticky-nav').css('bottom', 0);
@@ -61,9 +60,9 @@ $('.section-arrow-community').waypoint(function() {
 
 
 // For colorbox popping up for joining/donating
-$('#transparency').waypoint(function() {
-  $.colorbox({html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>"});
-}, {offset: 1});
+// $('#transparency').waypoint(function() {
+//   $.colorbox({html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>"});
+// }, {offset: 1});
 
 
 // Using waypoints to change active nav class

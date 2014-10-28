@@ -23,10 +23,15 @@
       padding-top: 0
 
 .office-video
+  padding: 0 0 2em 0
   .inner-wrap, .video
     @include media($mobile)
       padding-top: 0
       padding-bottom: 0
+
+#innovation
+  h1
+    margin: 0
 
 .in-backyard
   .image-container
@@ -38,10 +43,12 @@
 
 .legislature
   @include parallax-bg('../img/FMD14-Filibuster-bg002.jpg')
+  .text-container
+    padding: 2em 0 2.5em 0
   .stats
     @include media($mobile)
       padding-top: 0
-    padding-top: 1.5em
+    padding-top: 2.5em
 
 .livestream
   .image-container
@@ -59,6 +66,11 @@
     padding-top: 2.5em
 
 .watchdog
+  .image-container, .text-container
+    padding: 3em 0
+  .image-container
+    .counter-label
+      padding: 1em 0
   h2
     @include media($mobile)
       padding-top: 0
@@ -66,6 +78,7 @@
 
 .trib-investigates
   @include parallax-bg('../img/Workers-bg-CrystalDavis-006.jpg')
+  padding-bottom: 3em
   .text-container
     &.left
       @include media($tablet)
@@ -81,6 +94,9 @@
     .logo
       @include media($mobile)
         width: 100%
+
+.investigate-stars
+  padding-top: 2.5em
 
 .members
   @include parallax-bg('../img/FMD14-Member-bg002.jpg')
@@ -103,11 +119,6 @@
     img
       width: 50%
 
-.events-header
-  h1
-    margin: 0
-    padding-bottom: 0
-
 .triblive
   @include parallax-bg('../img/FMD14-Triblive-speaker-bg-grid.jpg')
   .image-container
@@ -127,6 +138,7 @@
       padding-left: 0
   .text-container
     margin-right: 0
+    padding-bottom: 3.5em
 
 .triblive-two
   @include media($mobile)
@@ -138,12 +150,20 @@
   background-repeat: repeat
   background-size: contain
 
+.festival-video
+  .video
+    padding: 4em 1em 3em 0
+
+.festival-stars
+  padding-top: 1em
+
 .stars
   .inner-wrap
     @include media($mobile)
       padding-bottom: 0
 
 .statewide-events
+  padding: 0
   h2
     @include media($mobile)
       padding-top: 0
@@ -152,5 +172,9 @@
       padding: 0
     padding-top: 0
 
+.audience
+  padding-bottom: 3em
+
 #donate
   height: 100%
+  padding-top: 2em
