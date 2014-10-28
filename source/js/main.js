@@ -68,6 +68,7 @@ $('#transparency').waypoint(function() {
     if (window.colorbox_count === 0) {
       $.colorbox(
       {html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>",
+      opacity: 0.5,
       onClosed: function() {
         window.colorbox_count += 1;
         }

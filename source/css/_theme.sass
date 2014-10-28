@@ -348,7 +348,7 @@ table
   border-radius: 5px
   color: $black
   font-family: $league-gothic
-  font-size: 2em
+  font-size: 1em
   height: 55px
   line-height: 55px
   margin: 0 auto
@@ -360,6 +360,12 @@ table
   &:hover
     background-color: $teal-trib
     color: $white
+
+// If js is enabled & proper font, size can be larger
+.wf-leaguegothic-i4-active, .wf-leaguegothic-n4-active
+  .cta-button
+    @extend .cta-button
+    font-size: 2em
 
 // Fixed button in right rail
 .cta-button-fixed
