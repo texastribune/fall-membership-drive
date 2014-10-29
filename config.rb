@@ -18,6 +18,15 @@ configure :build do
   activate :minify_javascript
 end
 
+# Compress images
+activate :imageoptim do |options|
+  options.pngout_options = false
+  options.advpng_options = false
+end
+
+# Gzip files
+activate :gzip
+
 # For s3 sync for deploying with middleman build
 activate :s3_sync do |config|
   config.bucket = 'anniversary.texastribune.org'

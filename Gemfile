@@ -21,3 +21,8 @@ gem "middleman-minify-html"
 
 # Pushes compiled site to S3 after middleman build
 gem "middleman-s3_sync"
+
+# Compress images
+gem "image_optim", "~> 0.9.1"
+
+gem "middleman-imageoptim", "~> 0.1.4"
