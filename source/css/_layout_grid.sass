@@ -1,23 +1,120 @@
+// Outer wrapper
 .wrapper
   +outer-container
-  max-width: 55em
+  max-width: 100%
 
-.page-wrap
-  background: $white
-
-//Main content area so below top nav
-.main
-  padding-top: 70px
 
 //Apply class to start a new container for themed sections
 .container
   +span-columns(12)
-  background-color: #eee
-  margin: 0.8em 0 0.8em 0
-  padding: 0.5em 2em 0.5em 2em
+  background-color: $white
+  padding: 0 0 1em 0
+  @include media($tablet)
+    padding: 0 0 0.5em 0
 
+.top-container
+  @include parallax-bg('../img/FMD14-Capitol-sky002.gif')
+  @include media($mobile)
+    height: 500px
+    margin-top: 47px
+  float: none
+  padding: 0
+
+
+// Inner wrap, mostly used inside .container
+.inner-wrap
+  @include media($tablet)
+    padding: 1em
+  height: 100%
+  margin: 0 auto
+  max-width: 1000px
+  padding: 0 7em
+  position: relative
+
+.inner-wrap-no-pad
+  @extend .inner-wrap
+  @include media($mobile)
+    padding-top: 0
+
+
+// Determine columns spanned by element
+.small
+  +span-columns(4)
+  @include media($tablet)
+    +span-columns(12)
+
+.small-medium
+  +span-columns(5)
+  @include media($tablet)
+    +span-columns(12)
+
+.medium
+  +span-columns(6)
+  @include media($tablet)
+    +span-columns(12)
+
+.medium-large
+  +span-columns(7)
+  @include media($tablet)
+    +span-columns(12)
+
+.large
+  +span-columns(12)
+
+
+// Provide element heights where appropriate
+// Mostly used for parallax windows
+.tall
+  height: 800px
+
+.medium-tall
+  height: 600px
+
+.medium-short
+  height: 500px
+
+.short
+  height: 400px
+
+
+// Floating
 .right
-  float: right
+  float: right !important
 
 .left
   float: left
+
+.no-float
+  float: none
+
+
+// Centering, clearing & margins
+.center
+  text-align: center
+
+.clear
+  clear: both
+
+.no-margin
+  margin: 0
+
+
+// Common padding amounts
+.no-pad
+  padding: 0
+
+.top-pad
+  padding-top: 1em
+
+.bottom-pad
+  padding-bottom: 1em
+
+.container
+  &.parallax-window
+    padding: 0
+
+
+// Display
+.hide
+  display: none
+  visibility: hidden

@@ -1,112 +1,408 @@
-//Header & footer
+//Header
 .header
-  background-color: $head-foot-bg
-  color: $textColor
+  background-color: $bg-head-foot
+  color: $text-header
   height: 50px
-  position: fixed
   width: 100%
-  z-index: 5 //to be sure it is seen over the flowing circular images
-  .wrapper
-    padding: 0.5em
+  .inner-wrap
+    padding: 0
   .social-link
-    color: $textColor
+    color: $text-header
     float: left
     font-size: 2em
     padding: 0 0.5em
-  img
-    padding: 0 0.5em 0 1em
-  h1
-    color: $trib-yellow
-    display: inline-block
-    font-size: 0.8em
-    font-weight: 500
-    letter-spacing: 0.2em
-    padding: 0 0 0.8em 0.5em
-    text-transform: uppercase
-    vertical-align: middle
-
-.footer
-  background-color: $head-foot-bg
-  color: $textColor
-  height: 50px
   ul
-    padding-right: 2em
+    margin: 0
+    padding-left: 0
     li
-      color: $trib-yellow
-      display: inline
-      font-size: 0.8em
-      padding: 0 0.2em 0 0.2em
+      display: inline-block
+      height: 50px
+      &.active
+        background-color: $teal-trib
+      &:hover
+        border-bottom: 2px solid $yellow-trib
+        a
+          color: #f0f0f0
+      &:last-child
+        a
+          color: $yellow-trib
       a
-        color: $trib-yellow
-        font-size: 0.9em
+        @include media($tablet)
+          font-size: 0.8em
+          padding-top: 1em
+        @include media($mobile)
+          font-size: 0.7em
+          padding: 0 0.5em
+        color: $text-header
+        font-family: $pt-sans-narrow
+        font-size: 1.3em
+        font-weight: 800
+        letter-spacing: 1px
+        line-height: 50px
+        padding: 0 0.6em
         text-decoration: none
+        &.bug
+          height: 1em
+          vertical-align: middle
+          img
+            height: 1em
 
-span
-  color: $textColor
-  font-weight: normal
+// sticky header
+#sticky-nav
+  height: 50px
+  overflow: hidden
+  position: fixed
+  top: 0
+  visibility: visible
+  z-index: 5
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateZ(0)
+
+// Footer
+.footer
+  @include media($desktop)
+    padding: 0
+    text-align: none
+  background-color: $bg-head-foot
+  clear: both
+  color: $white
+  margin: 0
+  padding: 1em 0
+  position: absolute
+  text-align: center
+  width: 100%
+  nav
+    @include media($desktop)
+      float: left
+      font-size: .75em
+      margin: 0 0 1em
+    ul
+      list-style: none
+      padding: 0
+    font-size: .875em
+  .first-nav
+    @include media($desktop)
+      float: left
+    color: $yellow-trib
+    li
+      padding: 0
+    a
+      color: $yellow-trib
+      text-decoration: none
+  .last-nav
+    @include media($desktop)
+      float: right
+    a
+      color: $white
+      text-decoration: none
+  li
+    @include media($desktop)
+      border-left: 1px solid $yellow-trib
+      display: inline
+      float: left
+      margin: 0
+      padding: 0 .5em
+      &:first-child
+        border: 0
+        padding-left: 0
+    margin: .75em 0
+
 
 
 // Styles for content types used in themed sections
 
-// Headers
-h1
-  font-family: Helvetica
 
+// Headers for sections
+.section-header
+  @include media($tablet)
+    padding: 0 1em
+  background: transparent
+  padding: 0 9em
+  h1
+    @include media($mobile)
+      font-size: 2.2em
+      margin: 0
+      padding-bottom: 0.5em
+    color: $black-middle
+    font-family: $proxima-nova
+    font-size: 3.75em
+    font-weight: 800
+    line-height: 1.1em
+    margin-top: 0
+    text-transform: uppercase
+  &:before
+    display: block
+    content: " "
+    height: 50px
+    visibility: hidden
+
+// Chunk headers
 h2
-  font-size: 1.2em
-  margin: 0 0 0.8em 0
+  color: $black-middle
+  font-family: $league-gothic
+  font-size: 2em
+  font-weight: 200
+  letter-spacing: 1px
+  line-height: 1em
+  margin: 0 0 0.4em 0
+  padding-top: 1em
   text-transform: uppercase
+
+
+// Colors and backgrounds
+.black
+  color: $black
+
+.black-bg
+  background-color: $black-light
+
+.black-shadow
+  text-shadow: rgba($black, 0.3) 0.1em 0.1em 0px
+
+.teal
+  color: $teal-trib
+
+.teal-bg
+  background-color: $teal-trib
+
+.teal-shadow
+  text-shadow: $teal-shadow 0.1em 0.1em 0px
+
+.teal-shadow-color
+  color: $teal-shadow
+
+.text-on-white
+  color: $navy-dark
+
+.text-on-yellow
+  color: $black
+
+.yellow
+  color: $yellow-trib
+
+.yellow-bg
+  background-color: $yellow-trib
+
+.yellow-shadow
+  text-shadow: $yellow-shadow 0.1em 0.1em 0px
+
+.yellow-shadow-color
+  color: $yellow-shadow
+
+.white
+  color: $white
+
+.white-bg
+  background-color: $white
+
+.white-shadow
+  text-shadow: $white-shadow 0.1em 0.1em 0px
+
+// For parallax
+.transparent
+  background-color: transparent
+
+// For arrow to transition between sections
+.section-arrow-white
+  @include section-arrow-slide('../img/triangle-white.svg')
+
+.section-arrow-yellow
+  @include section-arrow-slide('../img/triangle-yellow.svg')
+
+.section-arrow-black
+  @include section-arrow-slide('../img/triangle-black.svg')
+
+.section-arrow-teal
+  @include section-arrow-slide('../img/triangle-teal.svg')
+
+
+// Quote styles
+.quote-section
+  @include media($mobile)
+    font-size: 1.5em
+  font-family: $pt-sans-narrow
+  font-size: 1.85em
+  font-weight: 900
+  line-height: 1.15em
+  text-align: center
+
+.quote-overlay
+  @extend .quote-section
+  text-align: right
+
+.quote-inner
+  font-family: $league-gothic
+  font-size: 1.6em
+  font-weight: 400
+
+
+//Font Awesome
+// intro arrow
+.fa-angle-double-down
+  font-size: 3em
+
+// Star dividers
+.fa-star
+  @include media($mobile)
+    padding: 0 1em
+  font-size: 1.2em
+  padding: 0 2em
+
 
 // Text styles
 .text-container
-  clear: both
-  padding: 1em
-  width: 70%
-  @include media($tablet)
-    width: 100%
-
-.text-media-container
-  +span-columns(12)
-  clear: both
-  margin: 0 auto
-  .text-container
-    clear: none
-    margin-top: 5em
-    width: 60%
-    @include media($tablet)
-      margin-top: 0
-      width: 100%
+  padding: 0 0 1em 0
 
 .text
   display: inline
-  font-size: 1em
+  font-family: $pt-sans
+  font-size: 1.1em
+  font-weight: 300
+  line-height: 1.2em
   margin: 0
   padding: 0
   width: 100%
 
-// Image styles
-.flow
-  border-radius: 200px
-  margin-bottom: -80px
-  padding: 2em
-  position: relative
-  z-index: 2
 
+// Image styles
 .image-container
-  float: left
   max-width: 100%
+  padding: 2em 0 1em 0
 
 .image
-  padding: 2em 0.5em 0 0.5em
-  max-width: 100%
   @include media($tablet)
     float: none
+    width: 75%
+  @include media($mobile)
+    width: 100%
+  max-width: 100%
 
-.image-info
-  float: left
-  line-height: 1.5em
-  overflow: auto
-  padding: 0 0.5em 0 0.5em
+.image-wrap
+  @include media($mobile)
+    +span-columns(6)
+  +span-columns(4)
+  padding: 3em 0 0 1em
 
-cite
-  font-size: 0.6em
+.newsletter-image
+  @include media($tablet)
+    float: left
+  height: 40px
+  margin: 2em 0
+
+.tribtalk-logo
+  max-width: 100%
+  padding-top: 2em
+  width: 25%
+
+.logo
+  width: 85%
+
+.video
+  padding: 1em 1em 1em 0
+
+
+// For stat counters
+table
+  border-collapse: separate
+  border-spacing: 20px
+  width: 100%
+
+.counter-wrapper
+  padding: 0 0 1em 0
+  width: 50%
+  hr
+    border-style: none
+    border-top: 2px solid $yellow-trib
+    color: $yellow-trib
+    margin: 0 0 0.3em 0
+
+.counter
+  @include media($small-desktop)
+    font-size: 2.2em
+  font-family: $league-gothic
+  font-size: 2.8em
+  font-weight: 200
+  letter-spacing: 0.03em
+
+.counter-label
+  font-family: $pt-sans
+  font-size: 1em
+  font-weight: 400
+  letter-spacing: .13em
+  margin: 0
+  text-transform: uppercase
+
+
+
+// For CTA buttons & links
+.cta-link
+  color: $black
+  text-decoration: none
+  &:hover
+    background-color: $teal-trib
+    color: $white
+
+// Landing button
+.cta-button
+  background-color: $yellow-trib
+  border-radius: 5px
+  color: $black
+  font-family: $league-gothic
+  font-size: 1em
+  height: 55px
+  line-height: 55px
+  margin: 0 auto
+  right: 0px
+  text-align: center
+  text-transform: uppercase
+  vertical-align: center
+  width: 250px
+  &:hover
+    background-color: $teal-trib
+    color: $white
+
+// If js is enabled & proper font, size can be larger
+.wf-leaguegothic-i4-active, .wf-leaguegothic-n4-active
+  .cta-button
+    @extend .cta-button
+    font-size: 2em
+
+// Fixed button in right rail
+.cta-button-fixed
+  @extend .cta-button
+  border: 2px solid $white
+  bottom: 30px
+  position: fixed
+  width: 100px
+  z-index: 5
+  p
+    margin: 0
+
+// Bottom-of-site CTA
+.cta-bottom
+  .join
+    @include media($mobile)
+      font-size: 2.5em
+    font-family: $proxima-nova
+    font-size: 3.5em
+    font-weight: 800
+    line-height: 1.1em
+    text-transform: uppercase
+    a
+      color: $teal-trib
+      &:hover
+        color: $black
+  .become
+    font-family: $pt-sans-narrow
+    font-size: 2em
+    font-weight: 800
+    letter-spacing: 0
+    line-height: 0.6em
+
+// Join links throughout copy
+.join-links
+  font-family: $pt-sans
+  font-size: 1.1em
+  font-weight: 300
+  line-height: 1.2em
+  text-decoration: none

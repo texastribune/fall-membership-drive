@@ -3,5 +3,10 @@
 
 @import 'normalize';
 @import 'settings';
-@import 'theme';
+@import 'mixins';
 @import 'layout_grid';
+@import 'mobile';
+@import 'theme';
+@import 'sections';
+@import 'slicknav';
+@import 'colorbox';

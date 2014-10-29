@@ -3,4 +3,40 @@
 // Center images for tablet down
 .image-container
   @include media($tablet)
-    text-align: center
+    // find a better way instead of overriding these
+    clear: both !important
+    float: none !important
+    text-align: center !important
+    margin: 0 auto !important
+    padding: 0
+    width: 70%
+
+// Hide for mobile
+.mobile-hide
+  @include media($mobile)
+    display: none
+
+.tablet-hide
+  @include media($tablet)
+    display: none
+
+// Mobile menu styles
+.slicknav_menu
+  display: none
+  @include media($mobile)
+    display: block
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 2
+
+#menu
+  display: none
+
+.slicknav_nav
+  li
+    &:last-child
+      a
+        color: $yellow-trib
+
+

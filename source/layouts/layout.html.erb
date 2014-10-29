@@ -1,5 +1,6 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9"> <!![endif]-->
   <head>
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -11,25 +12,74 @@
     <meta property="og:title" content="Fall Membership Drive | The Texas Tribune">
     <meta property="og:type" content="website">
     <meta property="og:description" content="The Texas Tribune 2014 fall membership drive celebrates the Tribune's first five years.">
-    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
     <!-- Apple icons -->
     <link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://s3.amazonaws.com/static.texastribune.org/media/icons/iPhone_Icon_60x60.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://s3.amazonaws.com/static.texastribune.org/media/icons/iPad_Icon_76x76.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://s3.amazonaws.com/static.texastribune.org/media/icons/iPhone_Icon_120x120.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://s3.amazonaws.com/static.texastribune.org/media/icons/iPad_Icon_152x152.png"/>
-    <%= stylesheet_link_tag "app" %>
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      * { box-sizing: border-box; }
+      html { font-family: sans-serif; }
+      body { margin: 0px; }
+      .slicknav_menu { display: none; font-size: 1em; padding: 5px; background: rgb(17, 17, 17); }
+      .slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em; line-height: 1.125em; cursor: pointer; margin: 5px 5px 6px; text-decoration: none; background-color: rgb(17, 17, 17); }
+      .slicknav_menu .slicknav_menutxt { display: block; line-height: 1.188em; float: left; color: rgb(255, 255, 255); font-weight: bold; }
+      .slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0px 0px 0.438em; }
+      .slicknav_menu .slicknav_no-text { margin: 0px; }
+      .slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; -webkit-box-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px; box-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px; background-color: rgb(245, 245, 245); }
+      .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em; }
+      .slicknav_nav { clear: both; color: rgb(255, 255, 255); margin: 0px; padding: 0px; font-size: 0.875em; }
+      .slicknav_nav, .slicknav_nav ul { list-style: none; overflow: hidden; }
+      .slicknav_nav ul, .slicknav_nav li { display: block; }
+      .slicknav_nav a { display: block; font-family: pt-sans, sans-serif; padding: 5px 10px; margin: 2px 5px; text-decoration: none; color: rgb(255, 255, 255); }
+      img { border: 0px; }
+      .slicknav_nav li:last-child a { color: rgb(255, 194, 0); }
+      .hide { display: none; visibility: hidden; }
+      .cta-button, .wf-leaguegothic-i4-active .cta-button, .wf-leaguegothic-n4-active .cta-button, .cta-button-fixed { border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(34, 34, 34); font-family: league-gothic, sans-serif; font-size: 1em; height: 55px; line-height: 55px; margin: 0px auto; right: 0px; text-align: center; text-transform: uppercase; width: 250px; background-color: rgb(255, 194, 0); }
+      .cta-button-fixed { border: 2px solid rgb(255, 255, 255); bottom: 30px; position: fixed; width: 100px; z-index: 5; }
+      .wf-leaguegothic-i4-active .cta-button, .wf-leaguegothic-i4-active .cta-button-fixed, .wf-leaguegothic-n4-active .cta-button, .wf-leaguegothic-n4-active .cta-button-fixed { font-size: 2em; }
+      .cta-link { color: rgb(34, 34, 34); text-decoration: none; }
+      .cta-button-fixed p { margin: 0px; }
+      .container { float: left; display: block; margin-right: 2.35765%; width: 100%; padding: 0px 0px 1em; background-color: rgb(255, 255, 255); }
+      .top-container { float: none; padding: 0px; background-image: url(http://anniversary.texastribune.org/img/FMD14-Capitol-sky002.gif); background-attachment: fixed; background-size: cover; background-repeat: no-repeat; }
+      .transparent { background-color: transparent; }
+      .inner-wrap, .inner-wrap-no-pad { height: 100%; margin: 0px auto; max-width: 1000px; padding: 0px 7em; position: relative; }
+      .center { text-align: center; }
+      .image { max-width: 100%; }
+      .anniversary-logo { max-width: 1000px; padding: 2em 0px 1em; position: relative; width: 75%; }
+      .large { float: left; display: block; margin-right: 2.35765%; width: 100%; }
+      .text-container { padding: 1em 0px; }
+      .black { color: rgb(34, 34, 34); }
+      .text { display: inline; font-family: pt-sans, Helvetica, Arial, sans-serif; font-size: 1.1em; font-weight: 300; line-height: 1.2em; margin: 0px; padding: 0px; width: 100%; }
+      .teal { color: rgb(0, 137, 144); }
+      .fa-angle-double-down { font-size: 3em; }
+      article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+      .header { color: rgb(255, 255, 255); height: 50px; width: 100%; background-color: rgb(17, 17, 17); }
+      #sticky-nav { height: 50px; overflow: hidden; position: fixed; top: 0px; visibility: visible; z-index: 5; -webkit-backface-visibility: hidden; -webkit-transform: translateZ(0px); }
+      .header .inner-wrap, .header .inner-wrap-no-pad { padding: 0px; }
+      .header ul { margin: 0px; padding-left: 0px; }
+      .header ul li { display: inline-block; height: 50px; }
+      .header ul li a { color: rgb(255, 255, 255); font-family: pt-sans-narrow, 'Arial narrow', sans-serif; font-size: 1.3em; font-weight: 800; letter-spacing: 1px; line-height: 50px; padding: 0px 0.6em; text-decoration: none; }
+      .header ul li a.bug { height: 1em; vertical-align: middle; }
+      .header ul li a.bug img { height: 1em; }
+      .header ul li:last-child a { color: rgb(255, 194, 0); }
+      #menu { display: none; }
+    </style>
+    <script src="//use.typekit.net/zww2dfy.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <div class="page-wrap">
       <%= partial "header" %>
       <%= yield %>
-    </div>
-    <%= partial "footer" %>
-    <script type="text/javascript" src="js/skrollr.min.js"></script>
-    <script type="text/javascript">
-      window.onload = function() {
-        var s = skrollr.init();
-      };
-    </script>
+      <%= partial "footer" %>
+    <%= stylesheet_link_tag "app" %>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <%= javascript_include_tag 'all' %>
+    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
   </body>
 </html>
