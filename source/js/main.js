@@ -11,6 +11,12 @@ $(document).ready(function() {
   // Initialize the mobile slicknav menu
   $('#menu').slicknav();
 
+  // Lazily load images below the fold
+  $('img.lazy').show().lazyload({
+    threshold: 500,
+    skip_invisible: false
+  });
+
   // Always have nav start at the bottom of the screen on load if it fits
   // if ($(window).innerHeight() >= 625) {
   //   $('#unsticky-nav').css('bottom', 0);
