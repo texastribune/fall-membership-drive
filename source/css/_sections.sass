@@ -2,7 +2,6 @@
 // Then incorporate into general element styling as fit into patterns
 // TODO refactor these according to patterns
 .our-story
-  @include parallax-bg('../img/FMD14-Capitol003.gif')
   .inner-wrap
     h2
       @include media($mobile)
@@ -114,27 +113,6 @@
       width: 50%
 
 .triblive
-  @include parallax-bg('../img/FMD14-Triblive-speaker-bg-grid.jpg')
-  .image-container
-    @include media($tablet)
-      padding: 0
-    .image
-      @include media($mobile)
-        width: 100%
-
-.triblive-middle
-  margin: 0
-  padding: 0
-  .image-container
-    padding: 1em 0
-    &.left
-      margin-right: 0
-      padding-left: 0
-  .text-container
-    margin-right: 0
-    padding-bottom: 3.5em
-
-.triblive-two
   @include media($mobile)
     background-attachment: scroll
     background-image: url('../img/FMD14-Triblive-bg-6x6grid.jpg')
@@ -144,9 +122,13 @@
   background-repeat: repeat
   background-size: contain
 
+.triblive-two
+  .text-container
+    padding-top: 3em
+
 .festival-video
   .video
-    padding: 4em 1em 3em 0
+    padding: 2em 1em 3em 0
 
 .festival-stars
   padding-top: 1em
