@@ -17,12 +17,6 @@ $(document).ready(function() {
     skip_invisible: false
   });
 
-  // Always have nav start at the bottom of the screen on load if it fits
-  // if ($(window).innerHeight() >= 625) {
-  //   $('#unsticky-nav').css('bottom', 0);
-  //   $('.resize-wrapper').css('height', $(window).innerHeight() - 50);
-  // }
-
   // To be used by colorbox
   window.colorbox_count = 0;
 
@@ -49,13 +43,6 @@ $(document).ready(function() {
     }
   });
 });
-
-
-// For sticky header
-$('#unsticky-nav').waypoint(function() {
-  $('#sticky-nav').toggleClass('hide');
-  $('.cta-button-fixed').toggleClass('hide');
-}, {offset: 1});
 
 
 // For arrow transition between sections
@@ -87,6 +74,8 @@ $('#transparency').waypoint(function() {
 $('#story').waypoint(function() {
   $('.header li').removeClass('active');
   $('.header-link[href=#story]').closest('li').addClass('active');
+  // Show/hide the Join Us cta
+  $('.cta-button-fixed').toggleClass('hide');
 }, {offset: 20});
 
 $('#innovation').waypoint(function() {
@@ -113,7 +102,3 @@ $('#donate').waypoint(function() {
   $('.header li').removeClass('active');
   $('.header-link[href=#donate]').closest('li').addClass('active');
 }, {offset: 20});
-
-$('#donate').waypoint(function() {
-  $(this).addClass('yellow-bg');
-}, {offset: "30%"});
