@@ -113,14 +113,11 @@
       width: 50%
 
 .triblive
-  @include media($mobile)
-    background-attachment: scroll
-    background-image: url('../img/FMD14-Triblive-bg-6x6grid.jpg')
-    background-size: cover
-  background-image: url('../img/FMD14-Triblive-speaker-bg-grid.jpg')
-  background-attachment: fixed
-  background-repeat: repeat
-  background-size: contain
+  // @include media($mobile)
+  //   background-attachment: scroll
+  //   background-image: url('../img/FMD14-Triblive-bg-6x6grid.jpg')
+  //   background-size: cover
+  @include parallax-bg('../img/FMD14-Triblive-logo-speaker-bg-grid002.jpg')
 
 .triblive-two
   .text-container
