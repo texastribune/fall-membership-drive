@@ -11,12 +11,6 @@ $(document).ready(function() {
   // Initialize the mobile slicknav menu
   $('#menu').slicknav();
 
-  // Lazily load images below the fold
-  $('img.lazy').show().lazyload({
-    threshold: 500,
-    skip_invisible: false
-  });
-
   // To be used by colorbox
   window.colorbox_count = 0;
 
@@ -93,9 +87,9 @@ $('#transparency').waypoint(function() {
   $('.header-link[href=#transparency]').closest('li').addClass('active');
 }, {offset: 20});
 
-$('#engagement').waypoint(function() {
+$('#community').waypoint(function() {
   $('.header li').removeClass('active');
-  $('.header-link[href=#engagement]').closest('li').addClass('active');
+  $('.header-link[href=#community]').closest('li').addClass('active');
 }, {offset: 20});
 
 $('#donate').waypoint(function() {
