@@ -54,7 +54,16 @@ $('#transparency').waypoint(function() {
     // check that colorbox hasn't opened before
     if (window.colorbox_count === 0) {
       $.colorbox(
-      {html:"<h2 class='modal-header'>Support the</h2><h2 class='modal-header'>Texas Tribune!</h2><p class='modal-text'>Enjoying our 5th anniversary story?</p><div class='cta-button-modal-yellow'><a class='cta-link' href='http://www.texastribune.org/join/'><p>YES! I WANT TO BECOME A TRIBUNE MEMBER.</p></a></div><div class='cta-button-modal-teal'><a class='cta-link' href='http://www.texastribune.org/join/'><p>I'M STILL READING THE TRIBUNE'S STORY.</p></a></div>",
+      {html:"<i class='fa fa-times right'></i><h2 class='modal-header'>Support the</h2><h2 class='modal-header'>Texas Tribune!</h2><p class='modal-text'>Ready to join for a more informed Texas?</p><div class='cta-button-modal-yellow'><a class='cta-link' href='http://www.texastribune.org/join/'><p>YES! I'M READY TO BECOME A MEMBER.</p></a></div><div class='cta-button-modal-teal'><a class='cta-link'><p>ALMOST! I'M STILL READING.</p></a></div>",
+      closeButton: false,
+      onComplete: function() {
+        $('.cta-button-modal-teal').on('click', function(e) {
+          $.colorbox.close();
+        });
+        $('.fa-times').on('click', function(e) {
+          $.colorbox.close();
+        });
+      },
       opacity: 0.7,
       onClosed: function() {
         window.colorbox_count += 1;
