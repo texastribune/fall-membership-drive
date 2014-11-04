@@ -331,6 +331,7 @@ table
 // For CTA buttons & links
 .cta-link
   color: $black
+  padding: 0
   text-decoration: none
   &:hover
     background-color: $teal-trib
@@ -362,16 +363,16 @@ table
   font-weight: 600
   height: 50px
   line-height: 50px
-  margin: 0 auto
   text-align: center
   text-transform: uppercase
   vertical-align: center
   width: 400px
+  // will need to add mobile styles in here later
 
 .cta-button-modal-teal
   @extend .cta-button-modal
   background: $teal-trib
-  margin: 0.5em 0.5em 0 0.5em
+  margin: 0.5em 1em 0 1em
   .cta-link
     color: $white
 
@@ -379,10 +380,11 @@ table
   @extend .cta-button-modal
   color: $black
   background: $yellow-trib
-  margin: 0.5em
+  margin: 0.5em 1em 0 1em
 
+// Won't need this style if header goes away altogether
 .modal-header
-  font-family: $pt-sans
+  font-family: $proxima-nova
   font-size: 2.2em
   font-weight: 900
   line-height: 0.2em
