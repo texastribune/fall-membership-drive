@@ -54,8 +54,8 @@ $('#transparency').waypoint(function() {
     // check that colorbox hasn't opened before
     if (window.colorbox_count === 0) {
       $.colorbox(
-      {html:"<h2>Support the Texas Tribune!</h2><p class='text'>Enjoying our 5th anniversary story?</p><br><br><div class='cta-button'><a class='cta-link' href='http://www.texastribune.org/join/'><p>Join Us</p></a></div>",
-      opacity: 0.5,
+      {html:"<h2 class='modal-header'>Support the</h2><h2 class='modal-header'>Texas Tribune!</h2><p class='modal-text'>Enjoying our 5th anniversary story?</p><div class='cta-button-modal-yellow'><a class='cta-link' href='http://www.texastribune.org/join/'><p>YES! I WANT TO BECOME A TRIBUNE MEMBER.</p></a></div><div class='cta-button-modal-teal'><a class='cta-link' href='http://www.texastribune.org/join/'><p>I'M STILL READING THE TRIBUNE'S STORY.</p></a></div>",
+      opacity: 0.7,
       onClosed: function() {
         window.colorbox_count += 1;
         }
