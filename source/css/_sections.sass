@@ -1,6 +1,19 @@
 // First, gather these styles here for each section
 // Then incorporate into general element styling as fit into patterns
 // TODO refactor these according to patterns
+
+.top-container
+  padding-top: 50px
+  background-image: url('../img/FMD14-Capitol005-minus500px.gif')
+  background-position: 0 -2em
+  background-repeat: no-repeat
+  background-size: cover
+  .text-container, .large
+    padding: 1.5em 0
+  .medium-large
+    @include media($tablet)
+      +span-columns(7)
+      
 .our-story
   .inner-wrap
     h2
@@ -90,9 +103,10 @@
         width: 100%
 
 .members
-  @include parallax-bg('../img/FMD14-Member-bg004.jpg')
-  @include media($mobile)
-    @include parallax-bg('../img/FMD14-Member-bg002.jpg')
+  background-image: url('../img/FMD14-Member-bg004.jpg')
+  background-position: 0
+  background-repeat: no-repeat
+  background-size: cover
   .text-container
     @include media($tablet)
       padding-top: 4em
