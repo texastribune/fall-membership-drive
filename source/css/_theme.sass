@@ -4,8 +4,10 @@
 // Generated sprites used by Join Us cta
 
 .anniversary-logo
+  @include media($mobile)
+    padding-top: 2.5em
   max-width: 1000px
-  padding: 4em 0 3em 0
+  padding: 3.5em 0 2.5em 0
   position: relative
   width: 100%
 
@@ -41,14 +43,14 @@
           padding: 0 0.5em
         color: $text-header
         font-family: $pt-sans-narrow
-        font-size: 1.3em
+        font-size: 1.1em
         font-weight: 800
         letter-spacing: 1px
         line-height: 50px
-        padding: 0 0.6em
+        padding: 0 0.4em
         text-decoration: none
         &.bug
-          height: 1em
+          height: 0.8em
           vertical-align: middle
           img
             height: 1em
@@ -278,8 +280,6 @@ h2
 .image
   @include media($tablet)
     float: none
-    width: 75%
-  @include media($mobile)
     width: 100%
   max-width: 100%
 
@@ -367,7 +367,9 @@ table
   text-transform: uppercase
   vertical-align: center
   width: 400px
-  // will need to add mobile styles in here later
+  @include media($mobile)
+    width: 200px
+    font-size: 0.8em
 
 .cta-button-modal-teal
   @extend .cta-button-modal
@@ -382,15 +384,6 @@ table
   background: $yellow-trib
   margin: 0.5em 1em 0 1em
 
-// Won't need this style if header goes away altogether
-.modal-header
-  font-family: $proxima-nova
-  font-size: 2.2em
-  font-weight: 900
-  line-height: 0.2em
-  padding-top: 0.5em
-  text-align: center
-
 .modal-text
   font-family: $pt-sans
   font-size: 1.5em
@@ -398,6 +391,8 @@ table
   line-height: 1.2em
   padding-top: 0.2em
   text-align: center
+  @include media($mobile)
+    font-size: 1em
 
 // If js is enabled & proper font, size can be larger
 .wf-leaguegothic-i4-active, .wf-leaguegothic-n4-active
@@ -430,7 +425,7 @@ table
     a
       color: $teal-trib
       &:hover
-        color: $black
+        color: $yellow-trib
   .become
     font-family: $pt-sans-narrow
     font-size: 2em
