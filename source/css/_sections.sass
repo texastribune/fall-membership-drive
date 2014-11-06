@@ -120,7 +120,9 @@
         width: 100%
 
 .members
-  background-image: url('../img/FMD14-Member-bg005.jpg')
+  @include media($mobile)
+    background-image: url('../img/FMD14-Member-mobile-bg001.png')
+  background-image: url('../img/FMD14-Member-bg006.png')
   background-position: 0 -1.5em
   background-repeat: no-repeat
   background-size: cover
