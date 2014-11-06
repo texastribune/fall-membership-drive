@@ -38,7 +38,7 @@ $(document).ready(function() {
         }
       });
     }
-  }, 30000);
+  }, 60000);
 
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
