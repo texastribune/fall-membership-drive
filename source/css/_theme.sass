@@ -379,12 +379,19 @@ table
   margin: 0.5em 1em 0 1em
   .cta-link
     color: $white
+  &:hover
+    background: $teal-shadow
+    .cta-link
+      color: $white-shadow
 
 .cta-button-modal-yellow
   @extend .cta-button-modal
-  color: $black
   background: $yellow-trib
   margin: 0.5em 1em 0 1em
+  .cta-link
+    color: $black
+  &:hover
+    background: $yellow-shadow
 
 .modal-text
   font-family: $pt-sans
