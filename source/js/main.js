@@ -21,6 +21,7 @@ $(document).ready(function() {
       $.colorbox(
       {html:"<i class='fa fa-times right'></i><p class='modal-text'>Ready to become a member<br>for a more informed Texas?</p><div class='cta-button-modal-yellow'><a class='cta-link' href='http://www.texastribune.org/join/'><p>YES! I'M READY TO BECOME A MEMBER.</p></a></div><div class='cta-button-modal-teal'><a class='cta-link'><p>ALMOST! I'M STILL READING.</p></a></div>",
       closeButton: false,
+      scrolling: false,
       // add click events on colorbox load
       onComplete: function() {
         $('.cta-button-modal-teal').on('click', function(e) {
