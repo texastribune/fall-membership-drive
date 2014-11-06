@@ -5,13 +5,28 @@
 
 .anniversary-logo
   @include media($tablet)
+    width: 85% !important
+  @include media($mobile)
+    width: 75% !important
+  position: relative
+  width: 85%
+
+.top-wrap
+  @include media($tablet)
     padding: 2em 0 2.5em 0
   @include media($mobile)
     padding-top: 2.5em
+  display: inline-block
   max-width: 1000px
   padding: 3.5em 0 2.5em 0
   position: relative
-  width: 100%
+
+.social-top
+  color: $white
+  font-size: 1.5em
+  position: absolute
+  &:hover
+    color: $yellow-trib
 
 //Header
 .header
