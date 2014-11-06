@@ -4,6 +4,8 @@
 // Generated sprites used by Join Us cta
 
 .anniversary-logo
+  @include media($tablet)
+    padding: 2em 0 2.5em 0
   @include media($mobile)
     padding-top: 2.5em
   max-width: 1000px
@@ -412,6 +414,22 @@ table
   &:hover
     background-position: 0 0
 
+.mobile-join-cta
+  left: 35%
+  position: fixed
+  top: 0
+  z-index: 10
+  img
+    height: 60px
+
+.mobile-bug
+  left: 10px
+  position: fixed
+  top: 10px
+  z-index: 15
+  img
+    width: 1.5em
+
 // Bottom-of-site CTA
 .cta-bottom
   .join
@@ -423,9 +441,9 @@ table
     line-height: 1.1em
     text-transform: uppercase
     a
-      color: $teal-trib
+      color: $yellow-trib
       &:hover
-        color: $yellow-trib
+        color: $teal-trib
   .become
     font-family: $pt-sans-narrow
     font-size: 2em
