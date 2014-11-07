@@ -12,37 +12,37 @@ $(document).ready(function() {
   $('#menu').slicknav();
 
   // To be used by colorbox
-  window.colorbox_count = 0;
+  // window.colorbox_count = 0;
 
   // don't show popup for mobile
-  if (window.innerWidth > 500) {
+  // if (window.innerWidth > 500) {
     // colorbox opens after user is on page for 60 seconds
-    setTimeout(function(){
+    // setTimeout(function(){
       // check that colorbox hasn't opened before
-      if (window.colorbox_count === 0) {
-        $.colorbox(
-        {html:"<i class='fa fa-times right'></i><p class='modal-text'>Ready to become a member<br>for a more informed Texas?</p><div class='cta-button-modal-yellow'><a class='cta-link' href='http://www.texastribune.org/join/'><p>YES! I'M READY TO BECOME A MEMBER.</p></a></div><div class='cta-button-modal-teal'><a class='cta-link'><p>ALMOST! I'M STILL READING.</p></a></div>",
-        fixed: true,
-        closeButton: false,
-        scrolling: false,
+      // if (window.colorbox_count === 0) {
+      //   $.colorbox(
+      //   {html:"<i class='fa fa-times right'></i><p class='modal-text'>Ready to become a member<br>for a more informed Texas?</p><div class='cta-button-modal-yellow'><a class='cta-link' href='http://www.texastribune.org/join/'><p>YES! I'M READY TO BECOME A MEMBER.</p></a></div><div class='cta-button-modal-teal'><a class='cta-link'><p>ALMOST! I'M STILL READING.</p></a></div>",
+      //   fixed: true,
+      //   closeButton: false,
+      //   scrolling: false,
         // add click events on colorbox load
-        onComplete: function() {
-          $('.cta-button-modal-teal').on('click', function(e) {
-            $.colorbox.close();
-          });
-          $('.fa-times').on('click', function(e) {
-            $.colorbox.close();
-          });
-        },
-        opacity: 0.7,
+        // onComplete: function() {
+        //   $('.cta-button-modal-teal').on('click', function(e) {
+        //     $.colorbox.close();
+        //   });
+        //   $('.fa-times').on('click', function(e) {
+        //     $.colorbox.close();
+        //   });
+        // },
+        // opacity: 0.7,
         // increase colorbox count so opens only once
-        onClosed: function() {
-          window.colorbox_count += 1;
-          }
-        });
-      }
-    }, 60000);
-  }
+  //       onClosed: function() {
+  //         window.colorbox_count += 1;
+  //         }
+  //       });
+  //     }
+  //   }, 60000);
+  // }
 
   // Wrap videos and apply CSS for fluid width
   $('.video').fitVids();
