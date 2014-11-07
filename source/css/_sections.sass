@@ -74,12 +74,21 @@
 .livestream
   @include media($mobile)
     padding-top: 1.5em
-  .image-container
-    @include media($mobile)
-      padding: 0
-    padding-top: 1em
-    .image
-      width: 85%
+
+.livestream-image
+  @include media($tablet)
+    float: none
+    margin: 0 auto
+  @include media($mobile)
+    background-image: url('../img/livestream-logo-mobile.png')
+    height: 200px
+    width: 250px
+  background-image: url('../img/tt-livestream-logo002-disposed.gif')
+  background-position: center
+  background-size: 100% 100%
+  display: block
+  height: 300px
+  width: 300px
 
 .bidness
   @include parallax-bg('../img/FMD14-bidness-senate-bg.jpg')
