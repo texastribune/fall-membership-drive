@@ -20,6 +20,10 @@
   background-size: cover
   .text-container, .large
     padding: .75em 0
+    .text
+      @include media($mobile)
+        color: $white
+      color: $black
   .medium-large
     @include media($tablet)
       +span-columns(7)
