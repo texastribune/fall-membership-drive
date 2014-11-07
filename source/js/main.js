@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  // to be used to ensure backgrounds look good on iOS
+  if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    $('body').addClass('ios-device');
+  }
+
   // This initializes the stellar bgs with responsive true
   // Don't initialize on ios
   if (!navigator.userAgent.match(/iPhone|iPad|iPod/i)) {

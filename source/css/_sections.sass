@@ -2,6 +2,11 @@
 // Then incorporate into general element styling as fit into patterns
 // TODO refactor these according to patterns
 
+// iOS devices' backgrounds zoom in if not set
+.ios-device
+  .legislature, .bidness, .trib-investigates, .newsletters, .triblive, #donate
+    background-attachment: scroll !important
+
 .top-container
   @include media($tablet)
     background-position: 0 10%
@@ -158,8 +163,6 @@
   background-attachment: fixed
   background-repeat: no-repeat
   background-size: cover
-  @include media($tablet)
-    background-attachment: scroll
   // Reset to default attachment for mobile
   @include media($mobile)
     background-image: url('../img/FMD14-Triblive-bg-6x6grid002.jpg')
