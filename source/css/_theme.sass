@@ -15,7 +15,7 @@
   @include media($tablet)
     padding: 2em 0 2.5em 0
   @include media($mobile)
-    padding-top: 2.5em
+    padding: 2.5em 0 2em 0
   display: inline-block
   max-width: 1000px
   padding: 3.5em 0 2.5em 0
@@ -28,6 +28,15 @@
   padding-bottom: 1.2em
   &:hover
     color: $yellow-trib
+
+.social-top-wrap
+  &.mobile-show
+    float: none !important
+    padding-top: 2em
+    text-align: center
+    .social-top
+      font-size: 2em
+      padding: 0 1em
 
 //Header
 .header
