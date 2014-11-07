@@ -10,10 +10,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://s3.amazonaws.com/static.texastribune.org/common/images/favicon.ico">
     <!-- Open Graph info -->
     <meta property="og:url" content="http://anniversary.texastribune.org/">
-    <meta property="og:image" content="http://anniversary.texastribune.org/img/FMD14-5thAnniversary-logo-lrg002.png">
+    <meta property="og:image" content="https://s3.amazonaws.com/static.texastribune.org/media/membership/FMD14/FMD14-FBshare-img002.png">
     <meta property="og:title" content="Fall Membership Drive | The Texas Tribune">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="I support the @TexasTribune, and you should, too! Learn more about the important work the Tribune is doing on behalf of Texans at anniversary.texastribune.org, and become a member during the Fall Member Drive at texastribune.org/join/.">
+    <meta property="og:description" content="I support The Texas Tribune, and you should, too! Learn more about the important work the Tribune is doing on behalf of Texans at anniversary.texastribune.org, and become a member during the Fall Member Drive at texastribune.org/join.">
     <!-- Apple icons -->
     <link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://s3.amazonaws.com/static.texastribune.org/media/icons/iPhone_Icon_60x60.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://s3.amazonaws.com/static.texastribune.org/media/icons/iPad_Icon_76x76.png"/>
@@ -46,6 +46,38 @@
       ga('create', 'UA-9827490-1', 'texastribune.org');
       ga('require', 'displayfeatures');
       ga('send', 'pageview');
+
+      // Google Analytics Event Tracking
+
+      // Email sharing
+      $('.email-sharing').on('click', function() {
+        ga('send', 'event', 'social-icon', 'click', 'email-sharing');
+      });
+
+      // Twitter sharing
+      $('.twitter-sharing').on('click', function() {
+        ga('send', 'event', 'social-icon', 'click', 'twitter-sharing');
+      });
+
+      // Facebook sharing
+      $('.facebook-sharing').on('click', function() {
+        ga('send', 'event', 'social-icon', 'click', 'facebook-sharing');
+      });
+
+      // Nav link clicks
+      $('.header-link').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'nav-link');
+      });
+
+      // Join link clicks in copy
+      $('.join-links').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'copy-join-link');
+      });
+
+      // Info link clicks in copy
+      $('.copy-links').on('click', function() {
+        ga('send', 'event', 'link', 'click', 'copy-info-link');
+      });
     </script>
 
   </body>
