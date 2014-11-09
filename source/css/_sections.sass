@@ -177,9 +177,13 @@
   background-attachment: fixed
   background-repeat: no-repeat
   background-size: contain
+  height: 300px
+  @media screen and (max-width: 900px)
+    height: 250px
   // Reset to default attachment for mobile
-  @include media($mobile)
+  @media screen and (max-width: 600px)
     background-image: url('../img/FMD14-Triblive-bg-6x6grid002.jpg')
+    height: 300px
 
 .triblive-two
   .text-container
