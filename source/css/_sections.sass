@@ -150,7 +150,7 @@
       padding-top: 4em
     @include media($mobile)
       padding-top: 2em
-    padding-top: 3em
+    padding-top: 2em
 
 .newsletters
   @include media($mobile)
@@ -176,16 +176,15 @@
   background-image: url('../img/FMD14-Triblive-bg-grid-final.jpg')
   background-attachment: fixed
   background-repeat: no-repeat
-  background-size: cover
+  background-size: contain
   // Reset to default attachment for mobile
   @include media($mobile)
     background-image: url('../img/FMD14-Triblive-bg-6x6grid002.jpg')
-    background-size: contain
 
 .triblive-two
   .text-container
     @include media($tablet)
-      padding-top: 1.5em
+      padding-top: 1em
     padding-top: 3em
 
 .festival-video
